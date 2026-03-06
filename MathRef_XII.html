@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ink">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>MathRef XII — CBSE Class 12 Formulas</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,500&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── THEMES ─────────────────── */
+[data-theme="ink"]{--bg:#0e0c0a;--bg2:#141210;--bg3:#1c1916;--card:#191613;--card2:#211d19;--bdr:rgba(255,255,255,.07);--bdr2:rgba(255,255,255,.13);--t1:#f0ebe2;--t2:#a09070;--t3:#5a4e38;--acc:#e8a030;--acc2:#f5c870;--nav:#0b0a07cc;--glow:rgba(232,160,48,.12);--tag:rgba(232,160,48,.13);--tagc:#e8a030;--note:rgba(255,255,255,.04);--kbg:rgba(232,160,48,.05);--scroll:#2a2218;--prog:linear-gradient(90deg,#e8a030,#f5c870)}
+[data-theme="chalk"]{--bg:#f5f1e9;--bg2:#ede8de;--bg3:#e3ddd1;--card:#fff;--card2:#f9f4ec;--bdr:rgba(0,0,0,.08);--bdr2:rgba(0,0,0,.15);--t1:#1c1508;--t2:#6b5a40;--t3:#a09070;--acc:#b86a08;--acc2:#d4880a;--nav:#1c1508cc;--glow:rgba(184,106,8,.1);--tag:rgba(184,106,8,.1);--tagc:#b86a08;--note:rgba(0,0,0,.04);--kbg:rgba(184,106,8,.04);--scroll:#cfc8b8;--prog:linear-gradient(90deg,#b86a08,#d4880a)}
+[data-theme="slate"]{--bg:#090e18;--bg2:#0d1422;--bg3:#121c2e;--card:#101828;--card2:#152030;--bdr:rgba(100,200,255,.07);--bdr2:rgba(100,200,255,.14);--t1:#cce0f8;--t2:#6890b8;--t3:#3a5878;--acc:#38bdf8;--acc2:#7dd3fc;--nav:#060c14cc;--glow:rgba(56,189,248,.1);--tag:rgba(56,189,248,.1);--tagc:#38bdf8;--note:rgba(56,189,248,.04);--kbg:rgba(56,189,248,.04);--scroll:#1a2d42;--prog:linear-gradient(90deg,#38bdf8,#818cf8)}
+[data-theme="moss"]{--bg:#070e09;--bg2:#0b1510;--bg3:#101e15;--card:#0e1a12;--card2:#152019;--bdr:rgba(80,210,120,.07);--bdr2:rgba(80,210,120,.14);--t1:#c8f0d4;--t2:#5a9868;--t3:#305838;--acc:#4ade80;--acc2:#86efac;--nav:#050a07cc;--glow:rgba(74,222,128,.1);--tag:rgba(74,222,128,.1);--tagc:#4ade80;--note:rgba(74,222,128,.04);--kbg:rgba(74,222,128,.04);--scroll:#182e1e;--prog:linear-gradient(90deg,#4ade80,#22d3ee)}
+[data-theme="ember"]{--bg:#110806;--bg2:#1a0e08;--bg3:#22120a;--card:#1c0e08;--card2:#261408;--bdr:rgba(250,130,60,.07);--bdr2:rgba(250,130,60,.14);--t1:#fce8da;--t2:#c07060;--t3:#784030;--acc:#fb923c;--acc2:#fdba74;--nav:#0c0604cc;--glow:rgba(251,146,60,.12);--tag:rgba(251,146,60,.1);--tagc:#fb923c;--note:rgba(251,146,60,.04);--kbg:rgba(251,146,60,.05);--scroll:#2e1808;--prog:linear-gradient(90deg,#fb923c,#f43f5e)}
+
+/* ── RESET ──────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh;transition:background .3s,color .3s;-webkit-tap-highlight-color:transparent;overscroll-behavior:none}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* ── PROGRESS BAR ───────────── */
+#pbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--prog);z-index:9999;transition:width .1s}
+
+/* ── NAV ────────────────────── */
+.nav{position:sticky;top:0;z-index:500;height:60px;background:var(--nav);border-bottom:1px solid var(--bdr);display:flex;align-items:center;padding:0 16px;gap:10px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:background .3s}
+.brand{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:900;letter-spacing:-.03em;color:#fff;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0}
+[data-theme="chalk"] .brand{color:#1c1508}
+.brand-dot{color:var(--acc)}
+.brand-tag{font-family:'DM Mono',monospace;font-size:.52rem;letter-spacing:.1em;background:var(--tag);color:var(--tagc);border:1px solid var(--bdr2);padding:2px 6px;border-radius:3px}
+.srch{flex:1;max-width:380px;position:relative}
+.srch input{width:100%;background:var(--bdr);border:1px solid var(--bdr2);border-radius:10px;padding:9px 14px 9px 36px;color:var(--t1);font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;transition:all .2s;-webkit-appearance:none}
+.srch input::placeholder{color:var(--t3)}
+.srch input:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--glow)}
+.srch-ico{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--t3);pointer-events:none;font-size:.95rem}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:7px;flex-shrink:0}
+.tdots{display:flex;gap:5px;align-items:center}
+.tdot{width:22px;height:22px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;transition:all .2s;flex-shrink:0}
+.tdot:active{transform:scale(1.15)}
+.tdot.on{border-color:var(--t1);box-shadow:0 0 0 2px var(--acc)}
+.nav-btn{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--bdr);border:1px solid var(--bdr2);color:var(--t2);font-size:.95rem;transition:all .2s;flex-shrink:0;position:relative}
+.nav-btn:active,.nav-btn:hover{background:var(--glow);color:var(--acc);border-color:var(--acc)}
+.nav-btn.active{background:var(--glow);color:var(--acc);border-color:var(--acc)}
+.nav-btn-label{font-family:'DM Mono',monospace;font-size:.42rem;position:absolute;bottom:3px;letter-spacing:.05em;color:var(--t3)}
+
+/* ── LAYOUT ─────────────────── */
+.layout{display:grid;grid-template-columns:252px 1fr;min-height:calc(100vh - 60px)}
+
+/* ── SIDEBAR ────────────────── */
+.sidebar{background:var(--bg2);border-right:1px solid var(--bdr);position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;padding:14px 0 80px;scrollbar-width:thin;scrollbar-color:var(--scroll) transparent;transition:background .3s}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--scroll);border-radius:2px}
+.sb-ttl{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);padding:0 16px 10px}
+.sb-lnk{display:flex;align-items:center;gap:8px;padding:9px 16px;border-left:2px solid transparent;color:var(--t2);font-size:.8rem;font-weight:500;cursor:pointer;transition:all .15s}
+.sb-lnk:active,.sb-lnk:hover{color:var(--t1);background:var(--glow)}
+.sb-lnk.on{color:var(--acc2);border-left-color:var(--acc);background:var(--glow)}
+.sb-ico{font-family:'DM Mono',monospace;font-size:.75rem;width:20px;text-align:center;flex-shrink:0}
+.sb-lbl{flex:1;line-height:1.3;font-size:.78rem}
+.sb-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0}
+.sb-st{font-size:.5rem;color:var(--acc)}
+.sb-ago{font-family:'DM Mono',monospace;font-size:.48rem;color:var(--t3)}
+.sb-prog{height:3px;background:var(--bdr2);border-radius:2px;margin:1px 16px 5px;overflow:hidden}
+.sb-prog-bar{height:100%;background:var(--acc);border-radius:2px;transition:width .4s}
+.sb-prog-lbl{font-family:'DM Mono',monospace;font-size:.5rem;color:var(--t3);padding:0 16px 3px;display:flex;justify-content:space-between}
+
+/* ── MAIN ───────────────────── */
+.main{background:var(--bg);transition:background .3s;min-width:0}
+
+/* ── HERO ───────────────────── */
+.hero{padding:52px 40px 48px;border-bottom:1px solid var(--bdr);position:relative;overflow:hidden}
+.hero-deco{position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Fraunces',serif;font-size:15rem;line-height:1;font-weight:900;font-style:italic;color:var(--acc);opacity:.04;pointer-events:none;user-select:none}
+.hero-tag{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--acc);letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.hero-tag::before{content:'';width:18px;height:1px;background:var(--acc);display:inline-block}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,3.8vw,3.6rem);font-weight:900;line-height:1.05;letter-spacing:-.04em;color:var(--t1);margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--acc)}
+.hero-sub{color:var(--t2);font-size:.9rem;max-width:460px;line-height:1.75}
+.hero-stats{display:flex;margin-top:32px;border:1px solid var(--bdr2);border-radius:10px;overflow:hidden;width:fit-content}
+.hstat{padding:12px 20px;border-right:1px solid var(--bdr2);text-align:center}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:900;color:var(--acc2);line-height:1}
+.hstat-l{font-family:'DM Mono',monospace;font-size:.56rem;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+
+/* ── HEATMAP ────────────────── */
+#heatmap-section{padding:32px 40px;border-bottom:1px solid var(--bdr)}
+.heatmap-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--t1);margin-bottom:6px}
+.heatmap-sub{font-size:.8rem;color:var(--t2);margin-bottom:18px}
+.heatmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.hm-block{border-radius:10px;padding:12px;cursor:pointer;transition:all .2s;border:1px solid var(--bdr);position:relative;overflow:hidden}
+.hm-block:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.hm-block:active{transform:scale(.97)}
+.hm-ico{font-family:'DM Mono',monospace;font-size:.85rem;margin-bottom:6px;opacity:.8}
+.hm-title{font-size:.72rem;font-weight:600;color:var(--t1);line-height:1.3;margin-bottom:6px}
+.hm-marks{font-family:'DM Mono',monospace;font-size:.56rem;color:var(--t1);opacity:.7;margin-bottom:6px}
+.hm-bar{height:3px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden;margin-top:4px}
+.hm-bar-fill{height:100%;background:rgba(255,255,255,.5);border-radius:2px;transition:width .6s ease}
+.hm-prog-txt{font-family:'DM Mono',monospace;font-size:.48rem;color:rgba(255,255,255,.6);margin-top:3px}
+
+/* ── SUMMARY CARD ───────────── */
+.ch-summary{background:var(--bg2);border:1px solid var(--bdr2);border-radius:10px;padding:14px 16px;margin-bottom:20px;position:relative}
+.ch-summary-head{display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.ch-summary-ico{font-size:.8rem;transition:transform .25s}
+.ch-summary-ico.open{transform:rotate(90deg)}
+.ch-summary-ttl{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tagc)}
+.ch-summary-body{display:none;padding-top:12px}
+.ch-summary-body.open{display:block}
+.ch-summary-txt{font-size:.82rem;color:var(--t2);line-height:1.7;margin-bottom:10px}
+.ch-patterns-ttl{font-family:'DM Mono',monospace;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:6px}
+.ch-patterns-txt{font-size:.78rem;color:var(--t2);line-height:1.6;white-space:pre-line}
+
+/* ── FILTER BAR ─────────────── */
+.filter-bar{padding:10px 40px;border-bottom:1px solid var(--bdr);display:flex;gap:7px;align-items:center;flex-wrap:wrap;background:var(--bg2)}
+.filter-label{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--t3);letter-spacing:.12em;text-transform:uppercase;margin-right:2px;flex-shrink:0}
+.fchip{font-family:'DM Mono',monospace;font-size:.62rem;padding:5px 11px;border-radius:6px;border:1px solid var(--bdr2);color:var(--t2);background:var(--bdr);cursor:pointer;transition:all .2s;font-weight:500;white-space:nowrap}
+.fchip:hover{border-color:var(--acc);color:var(--acc)}
+.fchip.on{background:var(--tag);color:var(--tagc);border-color:var(--acc)}
+
+/* ── SEARCH PANE ────────────── */
+#spane{display:none;padding:36px 40px}
+#spane h2{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--t1);margin-bottom:4px}
+.smeta{font-size:.8rem;color:var(--t2);margin-bottom:20px}
+
+/* ── CHAPTER SECTION ────────── */
+.ch-sec{padding:44px 40px 16px;border-bottom:1px solid var(--bdr)}
+.ch-sec:last-child{border-bottom:none}
+.ch-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;position:relative}
+.ch-deco{position:absolute;right:0;top:-8px;font-family:'Fraunces',serif;font-size:5rem;font-weight:900;line-height:1;color:var(--acc);opacity:.04;pointer-events:none;letter-spacing:-.04em}
+.ch-ico{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:.9rem;font-weight:500;flex-shrink:0;border:1px solid var(--bdr2)}
+.ch-title{font-family:'Fraunces',serif;font-size:clamp(1.25rem,2vw,1.7rem);font-weight:900;letter-spacing:-.02em;line-height:1.1;color:var(--t1)}
+.ch-meta{display:flex;align-items:center;gap:7px;margin-top:5px;flex-wrap:wrap}
+.mpill{font-family:'DM Mono',monospace;font-size:.56rem;padding:2px 7px;border-radius:4px;font-weight:500}
+.mpill-n{background:var(--bg3);color:var(--t2)}
+.mpill-m{background:var(--tag);color:var(--tagc)}
+.ch-stars{font-size:.6rem;color:var(--acc)}
+.ch-quizbtn{font-family:'DM Mono',monospace;font-size:.56rem;padding:3px 10px;border-radius:5px;background:var(--tag);color:var(--tagc);border:1px solid var(--bdr2);cursor:pointer;transition:all .2s;white-space:nowrap}
+.ch-quizbtn:hover{background:var(--acc);color:#000}
+
+/* Chapter progress */
+.ch-prog-wrap{margin-bottom:18px}
+.ch-prog-outer{height:4px;background:var(--bdr2);border-radius:2px;overflow:hidden}
+.ch-prog-inner{height:100%;background:var(--prog);border-radius:2px;transition:width .5s ease}
+.ch-prog-lbl{font-family:'DM Mono',monospace;font-size:.55rem;color:var(--t3);display:flex;justify-content:space-between;margin-bottom:5px}
+
+/* ── TOPIC GROUP ────────────── */
+.tg{margin-bottom:20px}
+.tg-head{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.tg-name{font-family:'DM Mono',monospace;font-size:.56rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--t3);white-space:nowrap}
+.tg-line{flex:1;height:1px;background:var(--bdr)}
+
+/* ── FORMULA GRID ───────────── */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:8px}
+
+/* ── FORMULA CARD ───────────── */
+.fc{background:var(--card);border:1px solid var(--bdr);border-left:3px solid var(--bdr2);border-radius:10px;padding:14px 16px;transition:transform .15s,box-shadow .15s,border-color .15s;position:relative;touch-action:pan-y;user-select:none}
+.fc:hover{box-shadow:0 6px 22px rgba(0,0,0,.28);border-color:var(--bdr2)}
+.fc.key{background:var(--card2);border-left-color:var(--acc)}
+.fc.bookmarked{box-shadow:0 0 0 2px var(--acc) inset}
+.fc.checked{opacity:.45}
+.fc.checked .fc-lbl{text-decoration:line-through}
+.fc.swiping-right{border-left-color:#4ade80;background:rgba(74,222,128,.05)}
+.fc.swiping-left{border-left-color:var(--acc2);background:rgba(232,160,48,.05)}
+.fc.key::after{content:'KEY';position:absolute;top:9px;right:9px;font-family:'DM Mono',monospace;font-size:.48rem;color:var(--acc);background:var(--tag);border:1px solid var(--bdr2);padding:1px 5px;border-radius:3px;letter-spacing:.08em}
+.fc-lbl{font-family:'DM Mono',monospace;font-size:.57rem;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-bottom:7px;padding-right:60px;line-height:1.4}
+.fc.key .fc-lbl{color:var(--acc);opacity:.8}
+.fc-math{color:var(--t1);font-size:.9rem;line-height:1.9;overflow-x:auto;padding:2px 0}
+.fc-math::-webkit-scrollbar{height:2px}
+.fc-math::-webkit-scrollbar-thumb{background:var(--scroll)}
+.fc-note{margin-top:7px;background:var(--note);border-left:2px solid var(--bdr2);border-radius:0 6px 6px 0;padding:6px 9px;font-size:.7rem;color:var(--t2);line-height:1.5}
+.fc-user-note{margin-top:7px;background:var(--glow);border:1px solid var(--bdr2);border-radius:6px;padding:6px 9px;font-size:.72rem;color:var(--t1);line-height:1.5;cursor:pointer;white-space:pre-wrap}
+.fc-user-note-placeholder{color:var(--t3);font-style:italic}
+
+/* Card action buttons */
+.fc-actions{position:absolute;top:9px;right:9px;display:flex;gap:3px;opacity:0;transition:opacity .15s}
+.fc:hover .fc-actions,.fc.key .fc-actions{opacity:1}
+.fc-act-btn{width:24px;height:24px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:var(--bdr);border:1px solid var(--bdr2);color:var(--t3);font-size:.7rem;transition:all .15s;cursor:pointer;flex-shrink:0}
+.fc-act-btn:hover{background:var(--glow);color:var(--acc);border-color:var(--acc)}
+.fc-bm-btn.starred{color:var(--acc)}
+
+/* Swipe hint */
+.swipe-hint{position:absolute;top:50%;transform:translateY(-50%);font-size:1.2rem;pointer-events:none;opacity:0;transition:opacity .15s}
+.swipe-hint-r{right:12px}
+.swipe-hint-l{left:12px}
+.fc.swiping-right .swipe-hint-r{opacity:.8}
+.fc.swiping-left .swipe-hint-l{opacity:.8}
+
+/* Diff badges */
+.fc-diff{font-family:'DM Mono',monospace;font-size:.46rem;padding:1px 5px;border-radius:3px;position:absolute;bottom:9px;right:9px;opacity:.7}
+.diff-E{background:rgba(74,222,128,.15);color:#4ade80}
+.diff-M{background:rgba(232,160,48,.15);color:#e8a030}
+.diff-H{background:rgba(239,68,68,.15);color:#f87171}
+
+/* ── KATEX ───────────────────── */
+.katex{color:var(--t1)!important}
+.katex-display{background:var(--kbg);border:1px solid var(--bdr);border-radius:7px;padding:10px 14px;overflow-x:auto;margin:5px 0}
+.katex-display::-webkit-scrollbar{height:2px}
+.katex-display::-webkit-scrollbar-thumb{background:var(--scroll)}
+
+/* ── FOCUS MODE (feature 6) ─── */
+#focus-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.88);align-items:center;justify-content:center;padding:20px}
+#focus-overlay.show{display:flex}
+.focus-box{background:var(--bg2);border:1px solid var(--bdr2);border-radius:16px;width:100%;max-width:640px;max-height:90vh;overflow-y:auto;position:relative}
+.focus-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--bdr)}
+.focus-counter{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--t3)}
+.focus-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--t1);text-align:center;flex:1;padding:0 10px}
+.focus-close{width:32px;height:32px;border-radius:8px;background:var(--bdr);border:1px solid var(--bdr2);color:var(--t2);display:flex;align-items:center;justify-content:center;font-size:.9rem;cursor:pointer;flex-shrink:0}
+.focus-body{padding:28px 32px}
+.focus-ch{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--tagc);margin-bottom:6px;text-transform:uppercase;letter-spacing:.1em}
+.focus-lbl{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.focus-math{font-size:1.1rem;line-height:2;overflow-x:auto;color:var(--t1);padding:4px 0 16px}
+.focus-note{background:var(--note);border-left:2px solid var(--bdr2);padding:10px 12px;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--t2);line-height:1.6;margin-bottom:16px}
+.focus-user-note-area{width:100%;background:var(--bdr);border:1px solid var(--bdr2);border-radius:8px;padding:10px 12px;color:var(--t1);font-family:'DM Sans',sans-serif;font-size:.82rem;resize:vertical;min-height:70px;outline:none;margin-top:4px;transition:border-color .2s}
+.focus-user-note-area:focus{border-color:var(--acc)}
+.focus-user-note-lbl{font-family:'DM Mono',monospace;font-size:.56rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}
+.focus-diff-row{display:flex;gap:8px;align-items:center;margin-top:14px}
+.focus-diff-lbl{font-family:'DM Mono',monospace;font-size:.56rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em}
+.focus-diff-chip{font-family:'DM Mono',monospace;font-size:.62rem;padding:4px 10px;border-radius:5px;border:1px solid var(--bdr2);background:var(--bdr);color:var(--t2);cursor:pointer;transition:all .15s}
+.focus-diff-chip:hover{border-color:var(--acc)}
+.focus-diff-chip.on{border-color:var(--acc);color:var(--acc);background:var(--tag)}
+.focus-actions{display:flex;gap:8px;padding:16px 32px;border-top:1px solid var(--bdr)}
+.focus-btn{flex:1;padding:11px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;border:1px solid var(--bdr2);transition:all .2s;cursor:pointer;background:var(--bdr);color:var(--t2)}
+.focus-btn:hover{background:var(--glow);color:var(--acc);border-color:var(--acc)}
+.focus-btn.primary{background:var(--tag);color:var(--tagc);border-color:var(--acc)}
+.focus-btn.primary:hover{background:var(--acc);color:#000}
+.focus-arrows{display:flex;justify-content:space-between;padding:10px 32px 20px}
+.focus-arrow{width:44px;height:44px;border-radius:10px;background:var(--bdr);border:1px solid var(--bdr2);color:var(--t2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;transition:all .2s}
+.focus-arrow:hover{background:var(--glow);color:var(--acc)}
+.focus-arrow:disabled{opacity:.3;cursor:default}
+
+/* ── NOTE MODAL (feature 5) ─── */
+#note-modal{display:none;position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:20px}
+#note-modal.show{display:flex}
+.note-box{background:var(--bg2);border:1px solid var(--bdr2);border-radius:14px;width:100%;max-width:480px;padding:24px}
+.note-box-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--t1);margin-bottom:4px}
+.note-box-sub{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--t3);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+.note-textarea{width:100%;background:var(--bdr);border:1px solid var(--bdr2);border-radius:9px;padding:12px;color:var(--t1);font-family:'DM Sans',sans-serif;font-size:.88rem;resize:vertical;min-height:100px;outline:none;transition:border-color .2s;line-height:1.6}
+.note-textarea:focus{border-color:var(--acc)}
+.note-btns{display:flex;gap:8px;margin-top:12px;justify-content:flex-end}
+.note-btn{padding:9px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;border:1px solid var(--bdr2);cursor:pointer;transition:all .2s}
+.note-btn-save{background:var(--acc);color:#000;border-color:var(--acc)}
+.note-btn-cancel{background:var(--bdr);color:var(--t2)}
+.note-btn-clear{background:var(--bdr);color:#f87171;border-color:rgba(239,68,68,.3)}
+
+/* ── QUIZ MODAL (feature 13) ── */
+#quiz-modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:20px}
+#quiz-modal.show{display:flex}
+.quiz-box{background:var(--bg2);border:1px solid var(--bdr2);border-radius:16px;width:100%;max-width:540px;overflow:hidden}
+.quiz-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--bdr)}
+.quiz-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--t1)}
+.quiz-meta{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--tagc);background:var(--tag);padding:3px 9px;border-radius:5px}
+.quiz-prog-wrap{height:4px;background:var(--bdr2)}
+.quiz-prog-bar{height:100%;background:var(--prog);transition:width .4s}
+.quiz-body{padding:24px}
+.quiz-ch-label{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--tagc);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.quiz-topic-label{font-size:.76rem;color:var(--t2);margin-bottom:16px}
+.quiz-formula-box{background:var(--card);border:1px solid var(--bdr2);border-radius:10px;padding:18px;min-height:65px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:.95rem;overflow-x:auto}
+.quiz-reveal{display:none;background:var(--glow);border:1px solid var(--bdr2);border-radius:10px;padding:14px;margin-bottom:16px}
+.quiz-reveal.show{display:block}
+.quiz-reveal-lbl{font-family:'DM Mono',monospace;font-size:.55rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.quiz-reveal-ans{font-family:'Fraunces',serif;font-size:1rem;color:var(--acc);font-weight:700}
+.quiz-reveal-note{font-size:.74rem;color:var(--t2);margin-top:6px;line-height:1.5}
+.quiz-btns{display:flex;gap:8px;flex-wrap:wrap;padding:0 24px 20px}
+.quiz-btn{flex:1;min-width:90px;padding:11px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;border:1px solid var(--bdr2);transition:all .2s;cursor:pointer;background:var(--bdr);color:var(--t2)}
+.quiz-btn-reveal{background:var(--tag);color:var(--tagc);border-color:var(--acc)}
+.quiz-btn-correct{background:rgba(74,222,128,.15);color:#4ade80;border-color:#4ade80}
+.quiz-btn-wrong{background:rgba(239,68,68,.12);color:#f87171;border-color:#f87171}
+.quiz-btn-next{background:var(--acc);color:#000;border-color:var(--acc);display:none}
+.quiz-btn-next.show{display:flex;align-items:center;justify-content:center}
+.quiz-end{text-align:center;padding:28px 20px}
+.quiz-end-score{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:900;color:var(--acc2)}
+.quiz-end-msg{color:var(--t2);margin-top:6px;margin-bottom:22px;font-size:.88rem}
+
+/* ── PDF CHEATSHEET (feature 10) */
+#pdf-modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:20px}
+#pdf-modal.show{display:flex}
+.pdf-box{background:var(--bg2);border:1px solid var(--bdr2);border-radius:14px;width:100%;max-width:440px;padding:28px}
+.pdf-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--t1);margin-bottom:6px}
+.pdf-sub{font-size:.82rem;color:var(--t2);margin-bottom:20px;line-height:1.6}
+.pdf-options{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.pdf-opt{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;border:1px solid var(--bdr2);cursor:pointer;transition:all .2s}
+.pdf-opt:hover{border-color:var(--acc);background:var(--glow)}
+.pdf-opt.selected{border-color:var(--acc);background:var(--tag)}
+.pdf-opt-ico{font-size:1.1rem;flex-shrink:0}
+.pdf-opt-label{font-weight:600;font-size:.85rem;color:var(--t1)}
+.pdf-opt-sub{font-size:.72rem;color:var(--t2)}
+.pdf-btns{display:flex;gap:8px}
+.pdf-btn{flex:1;padding:11px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:600;border:1px solid var(--bdr2);cursor:pointer;transition:all .2s}
+.pdf-btn-go{background:var(--acc);color:#000;border-color:var(--acc)}
+.pdf-btn-cancel{background:var(--bdr);color:var(--t2)}
+
+/* ── LATEX COPY TOAST ────────── */
+#toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--card2);border:1px solid var(--bdr2);color:var(--t1);padding:8px 16px;border-radius:8px;font-size:.78rem;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:all .25s;z-index:9000;white-space:nowrap}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── BTT ─────────────────────── */
+#btt{position:fixed;bottom:24px;right:18px;width:42px;height:42px;background:var(--card2);border:1px solid var(--bdr2);color:var(--acc);border-radius:10px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:all .25s;z-index:800}
+#btt.show{opacity:1;pointer-events:auto}
+#btt:hover{background:var(--glow);transform:translateY(-3px)}
+
+/* ── PRINT ───────────────────── */
+@media print{
+  .nav,.sidebar,#btt,#focus-overlay,#quiz-modal,#pdf-modal,#note-modal,.filter-bar,.fc-actions,.ch-quizbtn,#heatmap-section .hero-stats{display:none!important}
+  .layout{display:block}
+  body{background:#fff!important;color:#000!important;font-size:11px}
+  .ch-sec{padding:14px 0;page-break-inside:avoid;border-bottom:1px solid #ddd}
+  .fgrid{grid-template-columns:repeat(3,1fr)!important;gap:5px}
+  .fc{border:1px solid #ccc!important;border-radius:4px!important;padding:7px!important;page-break-inside:avoid;background:#fff!important;box-shadow:none!important}
+  .fc.key{background:#fffbe6!important;border-left:3px solid #e8a030!important}
+  .katex{color:#000!important}
+  .ch-title{font-size:1.1rem;color:#000}
+  .hero{padding:10px 0;border-bottom:2px solid #000}
+  .hero h1{font-size:1.5rem;color:#000}
+  .hero-deco,.ch-deco,.ch-prog-wrap,.ch-summary,.heatmap-grid{display:none!important}
+  #pbar{display:none}
+}
+
+/* ── TABLET (Tab S6 Lite 1200px) */
+@media(max-width:1200px){
+  .layout{grid-template-columns:224px 1fr}
+  .hero{padding:44px 30px 40px}
+  .ch-sec{padding:40px 30px 14px}
+  #spane{padding:32px 30px}
+  .filter-bar{padding:10px 30px}
+  #heatmap-section{padding:28px 30px}
+}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{display:none}
+  html{font-size:16px}
+  .hero,.ch-sec,#spane,#heatmap-section{padding-left:18px;padding-right:18px}
+  .hero-stats{flex-wrap:wrap}
+  .filter-bar{padding:10px 18px}
+  .fgrid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+  .fc{padding:16px 18px}
+  .fc-actions{opacity:1}
+  .fc-diff{opacity:.8}
+}
+@media(max-width:600px){
+  .fgrid{grid-template-columns:1fr}
+  .brand-tag{display:none}
+  .hero-stats{display:grid;grid-template-columns:repeat(2,auto)}
+  .hm-block{padding:10px}
+  .focus-body,.focus-actions,.focus-arrows{padding-left:18px;padding-right:18px}
+}
+@media(hover:none){
+  .fc:hover{box-shadow:none}
+  .fc-actions{opacity:1}
+  .fc-diff{opacity:.7}
+}
+</style>
+</head>
+<body>
+<div id="pbar"></div>
+<div id="toast"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="brand">MathRef<span class="brand-dot">.</span><span class="brand-tag">XII</span></div>
+  <div class="srch">
+    <span class="srch-ico">⌕</span>
+    <input id="qinput" type="text" placeholder="Search formulas, chapters..." oninput="doSearch(this.value)">
+  </div>
+  <div class="nav-r">
+    <div class="tdots" id="tdots"></div>
+    <button class="nav-btn" id="btn-bm" title="Bookmarks">★<span class="nav-btn-label">SAVED</span></button>
+    <button class="nav-btn" id="btn-quiz" title="Quiz Mode">?<span class="nav-btn-label">QUIZ</span></button>
+    <button class="nav-btn" id="btn-pdf" title="Export PDF Cheatsheet">⎙<span class="nav-btn-label">PDF</span></button>
+    <button class="nav-btn" id="btn-print" onclick="window.print()" title="Print">🖨<span class="nav-btn-label">PRINT</span></button>
+  </div>
+</nav>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-deco">∑</div>
+      <div class="hero-tag">Class XII Mathematics · Complete Reference</div>
+      <h1>All the formulas.<br><em>Zero fluff.</em></h1>
+      <p class="hero-sub">350+ formulas across 13 chapters. Focus mode, notes, swipe gestures, PDF export, per-chapter quizzes and more. CBSE 2024–25.</p>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-n">13</div><div class="hstat-l">Chapters</div></div>
+        <div class="hstat"><div class="hstat-n">350+</div><div class="hstat-l">Formulas</div></div>
+        <div class="hstat"><div class="hstat-n" id="h-bm">0</div><div class="hstat-l">Bookmarked</div></div>
+        <div class="hstat"><div class="hstat-n" id="h-done">0</div><div class="hstat-l">Done</div></div>
+      </div>
+    </section>
+
+    <!-- HEATMAP (feature 3) -->
+    <section id="heatmap-section">
+      <div class="heatmap-title">Chapter Weightage Heatmap</div>
+      <div class="heatmap-sub">Sized by marks. Tap any block to jump to that chapter.</div>
+      <div class="heatmap-grid" id="heatmap-grid"></div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar" id="filter-bar">
+      <span class="filter-label">Filter:</span>
+      <button class="fchip on" data-diff="all" onclick="setDiff('all',this)">All</button>
+      <button class="fchip" data-diff="key" onclick="setDiff('key',this)">★ KEY</button>
+      <button class="fchip" data-diff="E" onclick="setDiff('E',this)">🟢 Easy</button>
+      <button class="fchip" data-diff="M" onclick="setDiff('M',this)">🟡 Medium</button>
+      <button class="fchip" data-diff="H" onclick="setDiff('H',this)">🔴 Hard</button>
+      <button class="fchip" data-diff="bm" onclick="setDiff('bm',this)">⭐ Bookmarked</button>
+    </div>
+
+    <!-- SEARCH PANE -->
+    <div id="spane">
+      <h2>Search Results</h2>
+      <p class="smeta" id="smeta"></p>
+      <div class="fgrid" id="sgrid"></div>
+    </div>
+
+    <!-- CHAPTERS -->
+    <div id="chapters"></div>
+  </main>
+</div>
+
+<button id="btt" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- FOCUS MODAL (feature 6) -->
+<div id="focus-overlay">
+  <div class="focus-box">
+    <div class="focus-nav">
+      <div class="focus-counter" id="focus-counter">1 / 1</div>
+      <div class="focus-title" id="focus-title"></div>
+      <button class="focus-close" onclick="closeFocus()">✕</button>
+    </div>
+    <div class="focus-body">
+      <div class="focus-ch" id="focus-ch"></div>
+      <div class="focus-lbl" id="focus-lbl"></div>
+      <div class="focus-math" id="focus-math"></div>
+      <div class="focus-note" id="focus-note" style="display:none"></div>
+      <div class="focus-user-note-lbl">My Note</div>
+      <div class="focus-user-note-area-wrap">
+        <textarea class="focus-user-note-area" id="focus-note-ta" placeholder="Add a personal note..." oninput="saveFocusNote()"></textarea>
+      </div>
+      <div class="focus-diff-row">
+        <span class="focus-diff-lbl">Difficulty:</span>
+        <button class="focus-diff-chip" data-d="E" onclick="setFocusDiff('E')">🟢 Easy</button>
+        <button class="focus-diff-chip" data-d="M" onclick="setFocusDiff('M')">🟡 Med</button>
+        <button class="focus-diff-chip" data-d="H" onclick="setFocusDiff('H')">🔴 Hard</button>
+      </div>
+    </div>
+    <div class="focus-actions">
+      <button class="focus-btn" onclick="focusToggleBm()">☆ Bookmark</button>
+      <button class="focus-btn" onclick="focusToggleCheck()">☐ Mark Done</button>
+      <button class="focus-btn primary" onclick="focusCopyLatex()">⎘ Copy LaTeX</button>
+    </div>
+    <div class="focus-arrows">
+      <button class="focus-arrow" id="focus-prev" onclick="moveFocus(-1)">←</button>
+      <button class="focus-arrow" id="focus-next" onclick="moveFocus(1)">→</button>
+    </div>
+  </div>
+</div>
+
+<!-- NOTE MODAL (feature 5) -->
+<div id="note-modal">
+  <div class="note-box">
+    <div class="note-box-title">Edit Note</div>
+    <div class="note-box-sub" id="note-modal-sub"></div>
+    <textarea class="note-textarea" id="note-modal-ta" placeholder="Write your personal note here..."></textarea>
+    <div class="note-btns">
+      <button class="note-btn note-btn-clear" onclick="clearNote()">Clear</button>
+      <button class="note-btn note-btn-cancel" onclick="closeNoteModal()">Cancel</button>
+      <button class="note-btn note-btn-save" onclick="saveNote()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ MODAL (feature 13) -->
+<div id="quiz-modal">
+  <div class="quiz-box">
+    <div class="quiz-head">
+      <div class="quiz-title" id="quiz-title">Quiz</div>
+      <div class="quiz-meta" id="quiz-meta">0 / 0</div>
+    </div>
+    <div class="quiz-prog-wrap"><div class="quiz-prog-bar" id="quiz-pbar" style="width:0%"></div></div>
+    <div class="quiz-body" id="quiz-body"></div>
+    <div class="quiz-btns" id="quiz-btns"></div>
+  </div>
+</div>
+
+<!-- PDF MODAL (feature 10) -->
+<div id="pdf-modal">
+  <div class="pdf-box">
+    <div class="pdf-title">Export PDF Cheatsheet</div>
+    <div class="pdf-sub">Choose what to include. The cheatsheet opens in a new print-ready tab.</div>
+    <div class="pdf-options">
+      <div class="pdf-opt selected" id="pdf-opt-key" onclick="selectPdfOpt('key',this)">
+        <div class="pdf-opt-ico">⭐</div>
+        <div><div class="pdf-opt-label">KEY Formulas Only</div><div class="pdf-opt-sub">~80 formulas, compact 2-page layout</div></div>
+      </div>
+      <div class="pdf-opt" id="pdf-opt-bm" onclick="selectPdfOpt('bm',this)">
+        <div class="pdf-opt-ico">★</div>
+        <div><div class="pdf-opt-label">My Bookmarks</div><div class="pdf-opt-sub">Only formulas you starred</div></div>
+      </div>
+      <div class="pdf-opt" id="pdf-opt-all" onclick="selectPdfOpt('all',this)">
+        <div class="pdf-opt-ico">📋</div>
+        <div><div class="pdf-opt-label">All Formulas</div><div class="pdf-opt-sub">Complete reference, ~350 formulas</div></div>
+      </div>
+    </div>
+    <div class="pdf-btns">
+      <button class="pdf-btn pdf-btn-cancel" onclick="document.getElementById('pdf-modal').classList.remove('show')">Cancel</button>
+      <button class="pdf-btn pdf-btn-go" onclick="exportPdf()">Generate →</button>
+    </div>
+  </div>
+</div>
+
+<!-- KaTeX -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+<script>
+var DATA=[
+{id:"c1",n:1,ico:"f(x)",title:"Relations & Functions",marks:"3-4",stars:1,col:"#7c6ef5",
+summary:"Relations classify how elements of a set relate to each other. A function is a special relation where every input has exactly one output. Key exam focus: proving equivalence relations, bijective functions, and inverse existence.",
+patterns:"Common Q types: (1) Show R is equivalence relation (3m) (2) Find number of functions (1m MCQ) (3) Prove f is bijective then find f⁻¹ (5m)",
+topics:[
+{t:"Types of Relations",fs:[
+{l:"Reflexive",m:"$aRa$ for all $a\\in A$",n:"Every element relates to itself"},
+{l:"Symmetric",m:"$aRb \\Rightarrow bRa$"},
+{l:"Transitive",m:"$aRb$ and $bRc \\Rightarrow aRc$"},
+{l:"Equivalence",m:"Reflexive + Symmetric + Transitive",n:"Must satisfy ALL three simultaneously",k:1},
+{l:"Empty Relation",m:"$R=\\emptyset$ — no element relates to any other"},
+{l:"Universal Relation",m:"$R=A\\times A$ — every element relates to all"},
+{l:"Identity Relation",m:"$R=\\{(a,a):a\\in A\\}$",n:"Always reflexive, symmetric, transitive"},
+{l:"Number of relations",m:"$2^{n^2}$ on a set of $n$ elements",n:"Total subsets of A×A"},
+]},
+{t:"Types of Functions",fs:[
+{l:"One-One (Injective)",m:"$f(x_1)=f(x_2)\\Rightarrow x_1=x_2$",k:1},
+{l:"Onto (Surjective)",m:"$\\forall\\,y\\in B,\\;\\exists\\,x\\in A: f(x)=y$",k:1},
+{l:"Bijective",m:"One-One AND Onto",n:"Inverse exists ⟺ bijective",k:1},
+{l:"Composition",m:"$(g\\circ f)(x)=g(f(x))$",n:"Apply f first, then g",k:1},
+{l:"Inverse property",m:"$(f^{-1}\\circ f)(x)=x$ and $(f\\circ f^{-1})(x)=x$",k:1},
+{l:"Inverse of composition",m:"$(g\\circ f)^{-1}=f^{-1}\\circ g^{-1}$",n:"Reversal law for inverses",k:1},
+{l:"Number of functions $A\\to B$",m:"$|B|^{|A|}$",n:"E.g. if |A|=2,|B|=3 → 9 functions"},
+{l:"Number of injections",m:"$^{|B|}P_{|A|}=\\frac{|B|!}{(|B|-|A|)!}$ if $|B|\\ge|A|$, else 0"},
+{l:"Number of bijections",m:"$n!$ when $|A|=|B|=n$"},
+]},
+{t:"Binary Operations",fs:[
+{l:"Commutative",m:"$a*b=b*a$ for all $a,b\\in A$"},
+{l:"Associative",m:"$(a*b)*c=a*(b*c)$ for all $a,b,c\\in A$"},
+{l:"Identity element",m:"$a*e=e*a=a$; e is the identity",k:1},
+{l:"Inverse element",m:"$a*a^{-1}=a^{-1}*a=e$",k:1},
+]},
+]},
+
+{id:"c2",n:2,ico:"sin⁻¹",title:"Inverse Trig Functions",marks:"3-4",stars:1,col:"#e8607a",
+summary:"Inverse trig functions are defined on restricted domains to ensure they are functions. The principal value branch is the key concept. Most exam questions test the complementary pair formulas and addition formulas.",
+patterns:"Common Q types: (1) Find principal value (1m) (2) Prove identity using addition formula (3m) (3) Simplify expression (2m)",
+topics:[
+{t:"Principal Value Branches",fs:[
+{l:"$\\sin^{-1}x$",m:"Domain $[-1,1]\\to$ Range $\\left[-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right]$",k:1},
+{l:"$\\cos^{-1}x$",m:"Domain $[-1,1]\\to$ Range $[0,\\pi]$",k:1},
+{l:"$\\tan^{-1}x$",m:"Domain $\\mathbb{R}\\to$ Range $\\left(-\\dfrac{\\pi}{2},\\dfrac{\\pi}{2}\\right)$",k:1},
+{l:"$\\cot^{-1}x$",m:"Domain $\\mathbb{R}\\to$ Range $(0,\\pi)$"},
+{l:"$\\sec^{-1}x$",m:"Domain $|x|\\ge1\\to$ Range $[0,\\pi]-\\{\\pi/2\\}$"},
+{l:"$\\operatorname{cosec}^{-1}x$",m:"Domain $|x|\\ge1\\to$ Range $[-\\pi/2,\\pi/2]-\\{0\\}$"},
+]},
+{t:"Complementary Pairs",fs:[
+{l:"$\\sin^{-1}x+\\cos^{-1}x$",m:"$=\\dfrac{\\pi}{2}$ for $x\\in[-1,1]$",k:1},
+{l:"$\\tan^{-1}x+\\cot^{-1}x$",m:"$=\\dfrac{\\pi}{2}$ for $x\\in\\mathbb{R}$",k:1},
+{l:"$\\sec^{-1}x+\\operatorname{cosec}^{-1}x$",m:"$=\\dfrac{\\pi}{2}$ for $|x|\\ge1$"},
+]},
+{t:"Odd/Even Properties",fs:[
+{l:"$\\sin^{-1}(-x)$",m:"$=-\\sin^{-1}x$",k:1},
+{l:"$\\tan^{-1}(-x)$",m:"$=-\\tan^{-1}x$",k:1},
+{l:"$\\operatorname{cosec}^{-1}(-x)$",m:"$=-\\operatorname{cosec}^{-1}x$"},
+{l:"$\\cos^{-1}(-x)$",m:"$=\\pi-\\cos^{-1}x$",n:"NOT odd — classic exam trap!",k:1},
+{l:"$\\cot^{-1}(-x)$",m:"$=\\pi-\\cot^{-1}x$",n:"Also NOT odd"},
+{l:"$\\sec^{-1}(-x)$",m:"$=\\pi-\\sec^{-1}x$"},
+]},
+{t:"Reciprocal Relations",fs:[
+{l:"$\\sin^{-1}(1/x)$",m:"$=\\operatorname{cosec}^{-1}x$ for $|x|\\ge1$",k:1},
+{l:"$\\cos^{-1}(1/x)$",m:"$=\\sec^{-1}x$ for $|x|\\ge1$",k:1},
+{l:"$\\tan^{-1}(1/x)$",m:"$=\\cot^{-1}x$ if $x>0$; $\\;=\\cot^{-1}x-\\pi$ if $x<0$",k:1},
+]},
+{t:"Addition Formulas",fs:[
+{l:"$\\tan^{-1}x+\\tan^{-1}y$ (if $xy<1$)",m:"$=\\tan^{-1}\\dfrac{x+y}{1-xy}$",k:1},
+{l:"$\\tan^{-1}x+\\tan^{-1}y$ (if $x>0,xy>1$)",m:"$=\\pi+\\tan^{-1}\\dfrac{x+y}{1-xy}$",k:1},
+{l:"$\\tan^{-1}x-\\tan^{-1}y$",m:"$=\\tan^{-1}\\dfrac{x-y}{1+xy}$ if $xy>-1$",k:1},
+{l:"$\\sin^{-1}x+\\sin^{-1}y$",m:"$=\\sin^{-1}\\left(x\\sqrt{1-y^2}+y\\sqrt{1-x^2}\\right)$ if $x,y\\ge0,x^2+y^2\\le1$",k:1},
+{l:"$\\cos^{-1}x+\\cos^{-1}y$",m:"$=\\cos^{-1}\\left(xy-\\sqrt{1-x^2}\\sqrt{1-y^2}\\right)$ if $x,y\\ge0$",k:1},
+]},
+{t:"Double Angle Forms",fs:[
+{l:"$2\\sin^{-1}x$",m:"$=\\sin^{-1}(2x\\sqrt{1-x^2})$ if $|x|\\le\\frac{1}{\\sqrt{2}}$",k:1},
+{l:"$2\\cos^{-1}x$",m:"$=\\cos^{-1}(2x^2-1)$ if $0\\le x\\le1$",k:1},
+{l:"$2\\tan^{-1}x$ (sin form)",m:"$=\\sin^{-1}\\dfrac{2x}{1+x^2}$ if $|x|\\le1$",k:1},
+{l:"$2\\tan^{-1}x$ (cos form)",m:"$=\\cos^{-1}\\dfrac{1-x^2}{1+x^2}$ if $x\\ge0$",k:1},
+{l:"$2\\tan^{-1}x$ (tan form)",m:"$=\\tan^{-1}\\dfrac{2x}{1-x^2}$ if $|x|<1$",k:1},
+{l:"$3\\sin^{-1}x$",m:"$=\\sin^{-1}(3x-4x^3)$"},
+{l:"$3\\cos^{-1}x$",m:"$=\\cos^{-1}(4x^3-3x)$"},
+{l:"$3\\tan^{-1}x$",m:"$=\\tan^{-1}\\dfrac{3x-x^3}{1-3x^2}$"},
+]},
+]},
+
+{id:"c3",n:3,ico:"[ ]",title:"Matrices",marks:"5-6",stars:2,col:"#34c985",
+summary:"Matrices encode linear systems and transformations. Key concepts: transpose laws, symmetric/skew decomposition, elementary row operations. The decomposition theorem appears almost every year as a 3-mark proof.",
+patterns:"Common Q types: (1) Find x,y,z from matrix equation (2m) (2) Prove symmetric/skew decomposition (3m) (3) Find A² or A³ and use Cayley-Hamilton (5m)",
+topics:[
+{t:"Basic Definitions",fs:[
+{l:"Order",m:"$A_{m\\times n}$: $m$ rows, $n$ cols, $mn$ elements",k:1},
+{l:"Square matrix",m:"$m=n$; diagonal: $a_{ij}$ where $i=j$"},
+{l:"Diagonal matrix",m:"$a_{ij}=0$ for all $i\\ne j$"},
+{l:"Scalar matrix",m:"Diagonal matrix with all diagonal elements equal"},
+{l:"Identity matrix $I$",m:"Diagonal entries all 1, rest 0; $AI=IA=A$",k:1},
+{l:"Zero matrix $O$",m:"All entries 0; $A+O=A$, $AO=OA=O$"},
+{l:"Upper triangular",m:"$a_{ij}=0$ for $i>j$"},
+{l:"Lower triangular",m:"$a_{ij}=0$ for $i<j$"},
+]},
+{t:"Operations & Warnings",fs:[
+{l:"Addition",m:"$(A+B)_{ij}=a_{ij}+b_{ij}$ — same order only"},
+{l:"Scalar multiplication",m:"$(kA)_{ij}=k\\cdot a_{ij}$"},
+{l:"Multiplication",m:"$A_{m\\times n}\\cdot B_{n\\times p}=C_{m\\times p}$",n:"Cols of A must equal rows of B",k:1},
+{l:"NOT commutative",m:"$AB\\ne BA$ in general",n:"Classic MCQ trap!",k:1},
+{l:"Null product warning",m:"$AB=O\\not\\Rightarrow A=O$ or $B=O$",k:1},
+{l:"Cancellation warning",m:"$AB=AC\\not\\Rightarrow B=C$ (unless A invertible)",k:1},
+{l:"Distributive",m:"$A(B+C)=AB+AC$ and $(A+B)C=AC+BC$"},
+{l:"Associative",m:"$(AB)C=A(BC)$"},
+]},
+{t:"Transpose Laws",fs:[
+{l:"$(A^T)^T=A$",m:"$(A^T)^T=A$",k:1},
+{l:"$(A+B)^T$",m:"$(A+B)^T=A^T+B^T$"},
+{l:"Reversal Law",m:"$(AB)^T=B^TA^T$",n:"Order reverses — very commonly tested",k:1},
+{l:"$(kA)^T$",m:"$(kA)^T=kA^T$"},
+{l:"$|A^T|=|A|$",m:"$|A^T|=|A|$",k:1},
+{l:"$(ABC)^T$",m:"$=C^TB^TA^T$",n:"Generalisation of reversal law"},
+]},
+{t:"Symmetric & Skew-Symmetric",fs:[
+{l:"Symmetric",m:"$A^T=A$, i.e. $a_{ij}=a_{ji}$",k:1},
+{l:"Skew-symmetric",m:"$A^T=-A$; all diagonal elements $=0$",k:1},
+{l:"$A+A^T$",m:"Always symmetric",k:1},
+{l:"$A-A^T$",m:"Always skew-symmetric",k:1},
+{l:"Decomposition Theorem",m:"$$A=\\underbrace{\\frac{A+A^T}{2}}_{\\text{symmetric}}+\\underbrace{\\frac{A-A^T}{2}}_{\\text{skew}}$$",n:"Classic 3-mark proof every year",k:1},
+{l:"Product of two symmetric",m:"$AB$ is symmetric iff $AB=BA$",n:"Only when they commute"},
+{l:"Skew diagonal",m:"For odd-order skew-symmetric: $|A|=0$",k:1},
+]},
+{t:"Special Products",fs:[
+{l:"Idempotent matrix",m:"$A^2=A$"},
+{l:"Nilpotent matrix",m:"$A^n=O$ for some positive integer $n$"},
+{l:"Involutory matrix",m:"$A^2=I$"},
+{l:"Orthogonal matrix",m:"$AA^T=A^TA=I$, i.e. $A^{-1}=A^T$"},
+{l:"Cayley-Hamilton Theorem",m:"Every matrix satisfies its own characteristic equation",n:"Use to find $A^{-1}$ or higher powers",k:1},
+]},
+]},
+
+{id:"c4",n:4,ico:"|A|",title:"Determinants",marks:"7-8",stars:3,col:"#f0a030",
+summary:"Determinants measure the 'scaling factor' of a linear transformation. The adjoint-inverse method and Cramer's rule are the main exam tools. The formula |adj A|=|A|^(n-1) appears every year in MCQs.",
+patterns:"Common Q types: (1) Evaluate 3×3 det using row ops (3m) (2) Find inverse using adjoint (5m) (3) Solve system using matrix method (5m) (4) MCQ on |adj A|",
+topics:[
+{t:"Expansion",fs:[
+{l:"2×2 determinant",m:"$$\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$$",k:1},
+{l:"3×3 along $R_1$",m:"$$|A|=a_1(b_2c_3-b_3c_2)-b_1(a_2c_3-a_3c_2)+c_1(a_2b_3-a_3b_2)$$",k:1},
+{l:"Cofactor $A_{ij}$",m:"$A_{ij}=(-1)^{i+j}M_{ij}$",n:"Sign pattern: + − + / − + − / + − +",k:1},
+{l:"Cofactor expansion",m:"$|A|=a_{i1}A_{i1}+a_{i2}A_{i2}+a_{i3}A_{i3}$",n:"Works along any row or column",k:1},
+{l:"Cross-row = 0",m:"$a_{11}A_{21}+a_{12}A_{22}+a_{13}A_{23}=0$",n:"Elements of one row × cofactors of different row = 0",k:1},
+]},
+{t:"Properties of Determinants",fs:[
+{l:"$|A^T|=|A|$",m:"$|A^T|=|A|$",k:1},
+{l:"Row swap",m:"Swapping two rows changes sign of $|A|$",k:1},
+{l:"Identical rows",m:"Two identical rows or columns $\\Rightarrow|A|=0$",k:1},
+{l:"Row of zeros",m:"A row or column of zeros $\\Rightarrow|A|=0$"},
+{l:"Row operation",m:"$R_i\\to R_i+kR_j$ leaves $|A|$ unchanged",n:"Most useful for simplification",k:1},
+{l:"Scalar row",m:"$R_i\\to kR_i$ multiplies $|A|$ by $k$"},
+{l:"Product rule",m:"$|AB|=|A|\\cdot|B|$",k:1},
+{l:"Scalar matrix",m:"$|kA|=k^n|A|$ (order $n$)",k:1},
+{l:"Proportional rows",m:"Rows/cols in proportion $\\Rightarrow|A|=0$",k:1},
+]},
+{t:"Adjoint & Inverse",fs:[
+{l:"Adjoint",m:"$\\operatorname{adj}(A)=[A_{ij}]^T$ (transpose of cofactor matrix)",k:1},
+{l:"Key identity",m:"$A\\cdot\\operatorname{adj}(A)=\\operatorname{adj}(A)\\cdot A=|A|\\cdot I$",k:1},
+{l:"Inverse formula",m:"$$A^{-1}=\\frac{\\operatorname{adj}(A)}{|A|},\\quad|A|\\ne0$$",k:1},
+{l:"$|\\operatorname{adj}A|$",m:"$=|A|^{n-1}$",n:"For 3×3: |adj A|=|A|² — appears in MCQ every year!",k:1},
+{l:"$\\operatorname{adj}(\\operatorname{adj}A)$",m:"$=|A|^{n-2}A$",n:"For 3×3: adj(adj A)=|A|·A",k:1},
+{l:"$(AB)^{-1}$",m:"$(AB)^{-1}=B^{-1}A^{-1}$",k:1},
+{l:"$(A^T)^{-1}$",m:"$=(A^{-1})^T$"},
+{l:"$|A^{-1}|$",m:"$=1/|A|$",k:1},
+{l:"$\\operatorname{adj}(AB)$",m:"$=\\operatorname{adj}(B)\\cdot\\operatorname{adj}(A)$",k:1},
+{l:"$\\operatorname{adj}(kA)$",m:"$=k^{n-1}\\operatorname{adj}(A)$ for $n\\times n$ matrix"},
+]},
+{t:"Applications",fs:[
+{l:"Area of triangle",m:"$$\\Delta=\\frac{1}{2}\\begin{vmatrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{vmatrix}$$",n:"Take absolute value",k:1},
+{l:"Collinear points",m:"$$\\begin{vmatrix}x_1&y_1&1\\\\x_2&y_2&1\\\\x_3&y_3&1\\end{vmatrix}=0$$",k:1},
+{l:"Unique solution (consistent)",m:"$|A|\\ne0\\Rightarrow X=A^{-1}B$",k:1},
+{l:"No solution",m:"$|A|=0$ and $(\\operatorname{adj}A)B\\ne O$",k:1},
+{l:"Infinite solutions",m:"$|A|=0$ and $(\\operatorname{adj}A)B=O$",k:1},
+]},
+]},
+
+{id:"c5",n:5,ico:"d/dx",title:"Continuity & Differentiability",marks:"7-8",stars:2,col:"#a370f0",
+summary:"Continuity requires LHL=RHL=value at the point. Differentiability implies continuity, but not vice versa. Logarithmic and parametric differentiation are the most-tested techniques.",
+patterns:"Common Q types: (1) Find k for continuity (2m) (2) Differentiate using log diff (3m) (3) Parametric second derivative (5m) (4) Verify Rolle's/MVT (3m)",
+topics:[
+{t:"Continuity",fs:[
+{l:"Continuity at $x=a$",m:"$\\lim_{x\\to a}f(x)=f(a)$",k:1},
+{l:"LHL=RHL=f(a)",m:"$\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)=f(a)$",k:1},
+{l:"Diff. $\\Rightarrow$ Continuous",m:"Every differentiable function is continuous",n:"Converse is NOT true",k:1},
+{l:"Continuity on closed interval",m:"Continuous at every point of $(a,b)$ and at endpoints",},
+{l:"Algebra of continuous functions",m:"$f\\pm g$, $fg$, $f/g$ ($g\\ne0$) are all continuous"},
+]},
+{t:"Differentiation Rules",fs:[
+{l:"Product rule",m:"$(uv)'=u'v+uv'$",k:1},
+{l:"Quotient rule",m:"$\\left(\\dfrac{u}{v}\\right)'=\\dfrac{u'v-uv'}{v^2}$",k:1},
+{l:"Chain rule",m:"$\\dfrac{dy}{dx}=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$",k:1},
+{l:"Parametric",m:"$\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}$",n:"x=f(t), y=g(t) — very common question type",k:1},
+{l:"Second derivative (parametric)",m:"$\\dfrac{d^2y}{dx^2}=\\dfrac{d}{dt}\\!\\left(\\dfrac{dy}{dx}\\right)\\div\\dfrac{dx}{dt}$",k:1},
+{l:"Logarithmic diff.",m:"$y=f(x)^{g(x)}\\Rightarrow\\log y=g(x)\\log f(x)$, diff. both sides",k:1},
+{l:"Implicit diff.",m:"Diff. both sides w.r.t. $x$, collect $dy/dx$",k:1},
+]},
+{t:"Standard Derivatives",fs:[
+{l:"$x^n$",m:"$nx^{n-1}$"},
+{l:"$e^x$, $a^x$",m:"$e^x$; $\\quad a^x\\log a$",k:1},
+{l:"$\\log x$, $\\log_a x$",m:"$1/x$; $\\quad 1/(x\\log a)$",k:1},
+{l:"$\\sin x$, $\\cos x$",m:"$\\cos x$; $\\quad -\\sin x$",k:1},
+{l:"$\\tan x$, $\\cot x$",m:"$\\sec^2x$; $\\quad -\\operatorname{cosec}^2x$",k:1},
+{l:"$\\sec x$, $\\operatorname{cosec}x$",m:"$\\sec x\\tan x$; $\\quad -\\operatorname{cosec}x\\cot x$",k:1},
+{l:"$\\sin^{-1}x$, $\\cos^{-1}x$",m:"$\\dfrac{1}{\\sqrt{1-x^2}}$; $\\quad\\dfrac{-1}{\\sqrt{1-x^2}}$",k:1},
+{l:"$\\tan^{-1}x$, $\\cot^{-1}x$",m:"$\\dfrac{1}{1+x^2}$; $\\quad\\dfrac{-1}{1+x^2}$",k:1},
+{l:"$\\sec^{-1}x$, $\\operatorname{cosec}^{-1}x$",m:"$\\dfrac{1}{|x|\\sqrt{x^2-1}}$; $\\quad\\dfrac{-1}{|x|\\sqrt{x^2-1}}$",k:1},
+]},
+{t:"Mean Value Theorems",fs:[
+{l:"Rolle's Theorem",m:"$f$ cts on $[a,b]$, diff on $(a,b)$, $f(a)=f(b)\\Rightarrow\\exists c: f'(c)=0$",k:1},
+{l:"Lagrange MVT",m:"$f$ cts on $[a,b]$, diff on $(a,b)\\Rightarrow f'(c)=\\dfrac{f(b)-f(a)}{b-a}$",k:1},
+{l:"Geometric meaning",m:"There exists a tangent parallel to the chord $AB$",n:"Visualise: horizontal tangent between equal endpoints for Rolle's"},
+]},
+]},
+
+{id:"c6",n:6,ico:"f'(x)",title:"Application of Derivatives",marks:"9-10",stars:3,col:"#e85050",
+summary:"The most calculation-heavy chapter. Rate of change, tangent/normal equations, and maxima-minima are tested every year. Always try first derivative test — second derivative fails when f''=0.",
+patterns:"Common Q types: (1) Rate of change word problem (3m) (2) Tangent/normal equation (3m) (3) Max/min optimization (5m) (4) Approximation using differentials (2m)",
+topics:[
+{t:"Rate of Change",fs:[
+{l:"Rate of change",m:"$\\dfrac{dy}{dx}$ represents rate of change of $y$ w.r.t. $x$",k:1},
+{l:"Related rates",m:"$\\dfrac{dy}{dt}=\\dfrac{dy}{dx}\\cdot\\dfrac{dx}{dt}$",n:"Chain rule applied to time-based problems",k:1},
+{l:"Area of circle",m:"$\\dfrac{dA}{dt}=2\\pi r\\cdot\\dfrac{dr}{dt}$",n:"Template for rate-of-change geometry problems"},
+{l:"Volume of sphere",m:"$\\dfrac{dV}{dt}=4\\pi r^2\\cdot\\dfrac{dr}{dt}$"},
+]},
+{t:"Tangents & Normals",fs:[
+{l:"Slope of tangent",m:"$m_T=\\left.\\dfrac{dy}{dx}\\right|_{(x_1,y_1)}$",k:1},
+{l:"Tangent equation",m:"$y-y_1=m_T(x-x_1)$",k:1},
+{l:"Slope of normal",m:"$m_N=-1/m_T$",k:1},
+{l:"Normal equation",m:"$y-y_1=(-1/m_T)(x-x_1)$",k:1},
+{l:"Tangent ∥ to x-axis",m:"$f'(x)=0$",k:1},
+{l:"Tangent ⊥ to x-axis",m:"$dx/dy=0$ (vertical tangent)"},
+{l:"Length of tangent",m:"$=\\dfrac{y\\sqrt{1+\\left(\\frac{dx}{dy}\\right)^2}}{1}$"},
+{l:"Length of normal",m:"$=y\\sqrt{1+\\left(\\dfrac{dy}{dx}\\right)^2}$"},
+]},
+{t:"Monotonicity",fs:[
+{l:"Strictly Increasing",m:"$f'(x)>0$ on $(a,b)$",k:1},
+{l:"Strictly Decreasing",m:"$f'(x)<0$ on $(a,b)$",k:1},
+{l:"Constant function",m:"$f'(x)=0$ on $(a,b)$"},
+{l:"Increasing + Decreasing",m:"Find intervals by solving $f'(x)=0$, then test signs",k:1},
+]},
+{t:"Maxima & Minima",fs:[
+{l:"Critical points",m:"$f'(x)=0$ or $f'(x)$ undefined",k:1},
+{l:"First Derivative Test",m:"$f'$ changes $+\\to-$ at $c$: local max; $-\\to+$: local min",n:"Most reliable — use when 2nd deriv. test fails",k:1},
+{l:"Second Derivative Test",m:"$f'(a)=0,\\;f''(a)<0\\Rightarrow$ local max; $f''(a)>0\\Rightarrow$ local min",n:"If $f''(a)=0$ test is inconclusive",k:1},
+{l:"Absolute Max/Min",m:"Evaluate $f$ at all critical points + endpoints of $[a,b]$",k:1},
+{l:"Global extrema condition",m:"For open interval, check limits as $x\\to$ endpoints",},
+]},
+{t:"Approximations",fs:[
+{l:"Linear approximation",m:"$\\Delta y\\approx\\dfrac{dy}{dx}\\cdot\\Delta x$",k:1},
+{l:"$f(a+h)$ formula",m:"$f(a+h)\\approx f(a)+h\\cdot f'(a)$",n:"Used for $\\sqrt{}$, cube roots, trig values",k:1},
+{l:"Percentage error",m:"$\\dfrac{\\Delta y}{y}\\times100\\%$",k:1},
+{l:"Relative error",m:"$\\Delta y/y$"},
+]},
+]},
+
+{id:"c7",n:7,ico:"∫",title:"Integrals",marks:"12-14",stars:3,col:"#5c7ef5",
+summary:"Highest-weighted chapter. Standard forms, IBP, and definite integral properties (especially King's Property) are essential. The eˣ[f(x)+f'(x)] trick appears in almost every paper.",
+patterns:"Common Q types: (1) Integrate using substitution (3m) (2) IBP with ILATE (3m) (3) Definite integral using King's property (3m) (4) Definite integral using limit-of-sum (5m)",
+topics:[
+{t:"Standard Integrals — Algebraic",fs:[
+{l:"$\\int x^n\\,dx$",m:"$\\dfrac{x^{n+1}}{n+1}+C,\\quad n\\ne-1$",k:1},
+{l:"$\\int dx/x$",m:"$\\log|x|+C$",k:1},
+{l:"$\\int e^x\\,dx$",m:"$e^x+C$",k:1},
+{l:"$\\int a^x\\,dx$",m:"$\\dfrac{a^x}{\\log a}+C$",k:1},
+{l:"$\\int 1\\,dx$",m:"$x+C$"},
+]},
+{t:"Standard Integrals — Trig",fs:[
+{l:"$\\int\\sin x\\,dx$",m:"$-\\cos x+C$",k:1},
+{l:"$\\int\\cos x\\,dx$",m:"$\\sin x+C$",k:1},
+{l:"$\\int\\sec^2x\\,dx$",m:"$\\tan x+C$",k:1},
+{l:"$\\int\\operatorname{cosec}^2x\\,dx$",m:"$-\\cot x+C$",k:1},
+{l:"$\\int\\sec x\\tan x\\,dx$",m:"$\\sec x+C$",k:1},
+{l:"$\\int\\operatorname{cosec}x\\cot x\\,dx$",m:"$-\\operatorname{cosec}x+C$",k:1},
+{l:"$\\int\\tan x\\,dx$",m:"$\\log|\\sec x|+C$",k:1},
+{l:"$\\int\\cot x\\,dx$",m:"$\\log|\\sin x|+C$",k:1},
+{l:"$\\int\\sec x\\,dx$",m:"$\\log|\\sec x+\\tan x|+C$",k:1},
+{l:"$\\int\\operatorname{cosec}x\\,dx$",m:"$\\log|\\operatorname{cosec}x-\\cot x|+C$",k:1},
+]},
+{t:"Standard Integrals — Inverse Trig",fs:[
+{l:"$\\int dx/\\sqrt{a^2-x^2}$",m:"$\\sin^{-1}(x/a)+C$",k:1},
+{l:"$\\int dx/(x^2+a^2)$",m:"$(1/a)\\tan^{-1}(x/a)+C$",k:1},
+{l:"$\\int dx/(x^2-a^2)$",m:"$\\dfrac{1}{2a}\\log\\left|\\dfrac{x-a}{x+a}\\right|+C$",k:1},
+{l:"$\\int dx/(a^2-x^2)$",m:"$\\dfrac{1}{2a}\\log\\left|\\dfrac{a+x}{a-x}\\right|+C$",k:1},
+{l:"$\\int dx/\\sqrt{x^2-a^2}$",m:"$\\log|x+\\sqrt{x^2-a^2}|+C$",k:1},
+{l:"$\\int dx/\\sqrt{x^2+a^2}$",m:"$\\log|x+\\sqrt{x^2+a^2}|+C$",k:1},
+{l:"$\\int 1/\\sqrt{1-x^2}\\,dx$",m:"$\\sin^{-1}x+C$",k:1},
+{l:"$\\int 1/(1+x^2)\\,dx$",m:"$\\tan^{-1}x+C$",k:1},
+]},
+{t:"Special Forms — must memorise",fs:[
+{l:"$\\int\\sqrt{x^2-a^2}\\,dx$",m:"$$\\frac{x}{2}\\sqrt{x^2-a^2}-\\frac{a^2}{2}\\log\\left|x+\\sqrt{x^2-a^2}\\right|+C$$",k:1},
+{l:"$\\int\\sqrt{x^2+a^2}\\,dx$",m:"$$\\frac{x}{2}\\sqrt{x^2+a^2}+\\frac{a^2}{2}\\log\\left|x+\\sqrt{x^2+a^2}\\right|+C$$",k:1},
+{l:"$\\int\\sqrt{a^2-x^2}\\,dx$",m:"$$\\frac{x}{2}\\sqrt{a^2-x^2}+\\frac{a^2}{2}\\sin^{-1}\\frac{x}{a}+C$$",k:1},
+]},
+{t:"Integration by Parts",fs:[
+{l:"IBP Formula",m:"$$\\int u\\,v\\,dx=u\\int v\\,dx-\\int\\left[\\frac{du}{dx}\\int v\\,dx\\right]dx$$",k:1},
+{l:"ILATE Rule",m:"$\\underbrace{I}_{\\text{nv trig}}\\to\\underbrace{L}_{\\text{og}}\\to\\underbrace{A}_{\\text{lg}}\\to\\underbrace{T}_{\\text{rig}}\\to\\underbrace{E}_{\\text{xp}}$",n:"Choose u by this priority order",k:1},
+{l:"eˣ Special ★",m:"$$\\int e^x[f(x)+f'(x)]\\,dx=e^xf(x)+C$$",n:"Appears every year — identify f and f' pair",k:1},
+{l:"$\\int\\log x\\,dx$",m:"$x\\log x-x+C$",k:1},
+{l:"$\\int xe^x\\,dx$",m:"$e^x(x-1)+C$",k:1},
+{l:"$\\int x^2e^x\\,dx$",m:"$e^x(x^2-2x+2)+C$"},
+{l:"$\\int x\\sin x\\,dx$",m:"$-x\\cos x+\\sin x+C$"},
+{l:"$\\int x\\cos x\\,dx$",m:"$x\\sin x+\\cos x+C$"},
+{l:"$\\int\\sin^{-1}x\\,dx$",m:"$x\\sin^{-1}x+\\sqrt{1-x^2}+C$"},
+{l:"$\\int\\cos^{-1}x\\,dx$",m:"$x\\cos^{-1}x-\\sqrt{1-x^2}+C$"},
+{l:"$\\int\\tan^{-1}x\\,dx$",m:"$x\\tan^{-1}x-\\frac{1}{2}\\log(1+x^2)+C$"},
+{l:"$\\int e^x\\cos x\\,dx$",m:"$\\dfrac{e^x(\\cos x+\\sin x)}{2}+C$",k:1},
+{l:"$\\int e^x\\sin x\\,dx$",m:"$\\dfrac{e^x(\\sin x-\\cos x)}{2}+C$",k:1},
+]},
+{t:"Trig Reductions",fs:[
+{l:"$\\sin^2x$",m:"$\\dfrac{1-\\cos2x}{2}$",k:1},
+{l:"$\\cos^2x$",m:"$\\dfrac{1+\\cos2x}{2}$",k:1},
+{l:"$\\sin^3x$",m:"$\\dfrac{3\\sin x-\\sin3x}{4}$"},
+{l:"$\\cos^3x$",m:"$\\dfrac{3\\cos x+\\cos3x}{4}$"},
+{l:"$\\int\\sin^2x\\,dx$",m:"$\\dfrac{x}{2}-\\dfrac{\\sin2x}{4}+C$",k:1},
+{l:"$\\int\\cos^2x\\,dx$",m:"$\\dfrac{x}{2}+\\dfrac{\\sin2x}{4}+C$",k:1},
+{l:"$\\int\\sin^3x\\,dx$",m:"$-\\cos x+\\dfrac{\\cos^3x}{3}+C$"},
+{l:"$\\int\\cos^3x\\,dx$",m:"$\\sin x-\\dfrac{\\sin^3x}{3}+C$"},
+{l:"$\\int\\tan^2x\\,dx$",m:"$\\tan x-x+C$"},
+]},
+{t:"Definite Integral Properties ★★",fs:[
+{l:"Linearity",m:"$\\int_a^b[cf(x)+g(x)]dx=c\\int_a^bf+\\int_a^bg$"},
+{l:"Reverse limits",m:"$\\int_a^bf(x)dx=-\\int_b^af(x)dx$",k:1},
+{l:"Split interval",m:"$\\int_a^bf=\\int_a^cf+\\int_c^bf$",k:1},
+{l:"P0",m:"$\\int_a^bf(x)dx=\\int_a^bf(t)dt$ (dummy variable)"},
+{l:"King's Property P4",m:"$$\\int_0^af(x)dx=\\int_0^af(a-x)dx$$",n:"Most used — appears in almost every 3-mark Q",k:1},
+{l:"King's General P3",m:"$$\\int_a^bf(x)dx=\\int_a^bf(a+b-x)dx$$",k:1},
+{l:"$x\\cdot f(x)$ trick ★",m:"$$\\int_a^bx\\,f(x)dx=\\frac{a+b}{2}\\int_a^bf(x)dx$$",n:"When $f(a+b-x)=f(x)$. Classic 5-mark Q",k:1},
+{l:"Even function",m:"$\\displaystyle\\int_{-a}^{a}f=2\\int_0^af$ if $f(-x)=f(x)$",k:1},
+{l:"Odd function",m:"$\\displaystyle\\int_{-a}^{a}f=0$ if $f(-x)=-f(x)$",k:1},
+{l:"Period 2a",m:"$\\int_0^{2a}f=2\\int_0^af$ if $f(2a-x)=f(x)$; $=0$ if $f(2a-x)=-f(x)$",k:1},
+{l:"$\\int_0^{\\pi/2}\\log\\sin x\\,dx$",m:"$=-\\dfrac{\\pi}{2}\\log2$",n:"Classic result via King's Property",k:1},
+{l:"$\\int_0^{\\pi/2}\\!\\dfrac{\\sqrt{\\sin x}}{\\sqrt{\\sin x}+\\sqrt{\\cos x}}dx$",m:"$=\\dfrac{\\pi}{4}$",k:1},
+{l:"$\\int_0^{\\pi}x\\,f(\\sin x)dx$",m:"$=\\dfrac{\\pi}{2}\\int_0^{\\pi}f(\\sin x)dx$",k:1},
+]},
+{t:"Limit of Sum (Riemann)",fs:[
+{l:"Definition",m:"$$\\int_a^bf(x)dx=\\lim_{n\\to\\infty}h\\sum_{r=0}^{n-1}f(a+rh),\\;h=\\frac{b-a}{n}$$",k:1},
+{l:"$\\sum_{r=1}^{n}r$",m:"$=\\dfrac{n(n+1)}{2}$",k:1},
+{l:"$\\sum_{r=1}^{n}r^2$",m:"$=\\dfrac{n(n+1)(2n+1)}{6}$",k:1},
+{l:"$\\sum_{r=1}^{n}r^3$",m:"$=\\left[\\dfrac{n(n+1)}{2}\\right]^2$",k:1},
+{l:"GP sum",m:"$\\sum_{r=0}^{n-1}ar^k=a\\dfrac{r^n-1}{r-1}$",k:1},
+]},
+{t:"Partial Fractions",fs:[
+{l:"Distinct linear",m:"$\\dfrac{N}{(x-a)(x-b)}=\\dfrac{A}{x-a}+\\dfrac{B}{x-b}$",k:1},
+{l:"Repeated linear",m:"$\\dfrac{N}{(x-a)^2}=\\dfrac{A}{x-a}+\\dfrac{B}{(x-a)^2}$",k:1},
+{l:"Three linear",m:"$\\dfrac{N}{(x-a)(x-b)(x-c)}=\\dfrac{A}{x-a}+\\dfrac{B}{x-b}+\\dfrac{C}{x-c}$",k:1},
+{l:"One repeated + one",m:"$\\dfrac{N}{(x-a)^2(x-b)}=\\dfrac{A}{x-a}+\\dfrac{B}{(x-a)^2}+\\dfrac{C}{x-b}$",k:1},
+{l:"Irreducible quadratic",m:"$\\dfrac{N}{(x-a)(x^2+bx+c)}=\\dfrac{A}{x-a}+\\dfrac{Bx+C}{x^2+bx+c}$",k:1},
+]},
+]},
+
+{id:"c8",n:8,ico:"∬",title:"Application of Integrals",marks:"4-5",stars:1,col:"#20b8c8",
+summary:"Find areas using integration. Always sketch the curve, identify intersection points, and decide whether to integrate w.r.t. x or y. The most common error is forgetting to take |f(x)| when the curve goes below the x-axis.",
+patterns:"Common Q types: (1) Area bounded by parabola and line (4m) (2) Area of ellipse or circle (3m) (3) Area between two curves (5m)",
+topics:[
+{t:"Area Formulas",fs:[
+{l:"Area under curve",m:"$$A=\\int_a^b|f(x)|\\,dx$$",n:"Use absolute value for parts below x-axis",k:1},
+{l:"Area between two curves",m:"$$A=\\int_a^b[f(x)-g(x)]\\,dx,\\quad f(x)\\ge g(x)$$",n:"Find intersection points first",k:1},
+{l:"Area via y-axis",m:"$A=\\displaystyle\\int_c^d|g(y)|\\,dy$"},
+{l:"Circle $x^2+y^2=r^2$",m:"$A=\\pi r^2$",k:1},
+{l:"Ellipse",m:"$A=\\pi ab$ for $\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$",k:1},
+{l:"Parabola $y^2=4ax$",m:"Area from $x=0$ to $x=h$: $\\dfrac{4}{3}\\sqrt{ah^3}$",n:"Derived by integration"},
+{l:"Area of sector",m:"Use limits corresponding to angle range"},
+]},
+{t:"Standard Curve Sketching",fs:[
+{l:"Parabola $y^2=4ax$",m:"Opens right, vertex at origin, symmetric about x-axis"},
+{l:"Parabola $x^2=4ay$",m:"Opens up, vertex at origin, symmetric about y-axis"},
+{l:"Circle $x^2+y^2=a^2$",m:"Centre $(0,0)$, radius $a$"},
+{l:"Ellipse",m:"$\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$; semi-axes $a$ (x) and $b$ (y)"},
+]},
+]},
+
+{id:"c9",n:9,ico:"dy/dx",title:"Differential Equations",marks:"4-5",stars:2,col:"#d050e0",
+summary:"Three main types: variable separable, homogeneous (substitute y=vx), and linear first-order (find IF). Always verify the solution by back-substitution. Most common error: forgetting the constant of integration.",
+patterns:"Common Q types: (1) Solve variable separable DE (3m) (2) Solve homogeneous DE (5m) (3) Solve linear DE (5m) (4) Form DE by eliminating constants (2m)",
+topics:[
+{t:"Terminology",fs:[
+{l:"Order",m:"Order = degree of highest derivative present",k:1},
+{l:"Degree",m:"Degree = power of highest derivative (polynomial form only)",k:1},
+{l:"General solution",m:"Contains $n$ arbitrary constants ($n$ = order)",k:1},
+{l:"Particular solution",m:"Obtained using initial/boundary conditions"},
+{l:"Formation",m:"Differentiate $n$ times and eliminate $n$ arbitrary constants",k:1},
+]},
+{t:"Solution Methods",fs:[
+{l:"Variable Separable",m:"$$\\frac{dy}{dx}=f(x)g(y)\\implies\\int\\frac{dy}{g(y)}=\\int f(x)\\,dx+C$$",k:1},
+{l:"Homogeneous DE",m:"$\\dfrac{dy}{dx}=F(y/x)$ — substitute $y=vx$",n:"So $dy/dx=v+x(dv/dx)$",k:1},
+{l:"Linear DE (standard form)",m:"$$\\frac{dy}{dx}+P(x)y=Q(x)$$",k:1},
+{l:"Integrating Factor",m:"$$\\text{IF}=e^{\\int P\\,dx}$$",k:1},
+{l:"Solution of linear DE",m:"$$y\\cdot\\text{IF}=\\int Q\\cdot\\text{IF}\\,dx+C$$",n:"Multiply both sides by IF, then integrate",k:1},
+{l:"Bernoulli's equation",m:"$\\dfrac{dy}{dx}+P(x)y=Q(x)y^n$ — divide by $y^n$, substitute $v=y^{1-n}$"},
+{l:"Exact DE",m:"$M\\,dx+N\\,dy=0$ is exact if $\\partial M/\\partial y=\\partial N/\\partial x$"},
+]},
+{t:"Common Results",fs:[
+{l:"$\\int\\dfrac{dv}{F(v)-v}=\\ln|x|+C$",m:"Result after substituting $y=vx$ in homogeneous",k:1},
+{l:"Growth/decay model",m:"$\\dfrac{dN}{dt}=kN\\Rightarrow N=N_0e^{kt}$",k:1},
+{l:"Newton's cooling",m:"$\\dfrac{dT}{dt}=k(T-T_s)\\Rightarrow T-T_s=(T_0-T_s)e^{kt}$",k:1},
+]},
+]},
+
+{id:"c10",n:10,ico:"→",title:"Vector Algebra",marks:"5-6",stars:2,col:"#28c070",
+summary:"Vectors have both magnitude and direction. The dot product gives angle/projection; the cross product gives area/perpendicularity. The scalar triple product gives volume and coplanarity. Cyclic rules for i,j,k are essential.",
+patterns:"Common Q types: (1) Find unit vector / angle (2m) (2) Prove vectors coplanar (3m) (3) Find area using cross product (3m) (4) Find projection (2m)",
+topics:[
+{t:"Vector Basics",fs:[
+{l:"Magnitude",m:"$|\\vec{r}|=\\sqrt{x^2+y^2+z^2}$",k:1},
+{l:"Unit vector",m:"$\\hat{a}=\\vec{a}/|\\vec{a}|$",k:1},
+{l:"Direction cosines",m:"$\\cos\\alpha=l=a/|\\vec{r}|$, $\\cos\\beta=m$, $\\cos\\gamma=n$",k:1},
+{l:"DC identity",m:"$l^2+m^2+n^2=1$",k:1},
+{l:"Section formula (internal)",m:"$\\vec{r}=(m\\vec{b}+n\\vec{a})/(m+n)$",k:1},
+{l:"Section formula (external)",m:"$\\vec{r}=(m\\vec{b}-n\\vec{a})/(m-n)$"},
+{l:"Midpoint",m:"$\\vec{M}=(\\vec{a}+\\vec{b})/2$",k:1},
+{l:"Position vector of centroid",m:"$\\vec{G}=(\\vec{a}+\\vec{b}+\\vec{c})/3$"},
+]},
+{t:"Dot Product",fs:[
+{l:"Definition",m:"$\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta$",k:1},
+{l:"Component form",m:"$\\vec{a}\\cdot\\vec{b}=a_1b_1+a_2b_2+a_3b_3$",k:1},
+{l:"Angle formula",m:"$\\cos\\theta=\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$",k:1},
+{l:"Perpendicular condition",m:"$\\vec{a}\\perp\\vec{b}\\iff\\vec{a}\\cdot\\vec{b}=0$",k:1},
+{l:"$\\hat{i}\\cdot\\hat{i}=1$; $\\hat{i}\\cdot\\hat{j}=0$",m:"$\\hat{i}\\cdot\\hat{i}=\\hat{j}\\cdot\\hat{j}=\\hat{k}\\cdot\\hat{k}=1$; $\\hat{i}\\cdot\\hat{j}=\\hat{j}\\cdot\\hat{k}=\\hat{k}\\cdot\\hat{i}=0$",k:1},
+{l:"Projection of $\\vec{a}$ on $\\vec{b}$",m:"$=\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}$",k:1},
+{l:"$|\\vec{a}|^2=\\vec{a}\\cdot\\vec{a}$",m:"$|\\vec{a}|^2=\\vec{a}\\cdot\\vec{a}=a_1^2+a_2^2+a_3^2$",k:1},
+{l:"$|\\vec{a}+\\vec{b}|^2$",m:"$=|\\vec{a}|^2+2\\vec{a}\\cdot\\vec{b}+|\\vec{b}|^2$"},
+{l:"$|\\vec{a}-\\vec{b}|^2$",m:"$=|\\vec{a}|^2-2\\vec{a}\\cdot\\vec{b}+|\\vec{b}|^2$"},
+]},
+{t:"Cross Product",fs:[
+{l:"Definition",m:"$\\vec{a}\\times\\vec{b}=|\\vec{a}||\\vec{b}|\\sin\\theta\\,\\hat{n}$",k:1},
+{l:"Determinant form",m:"$$\\vec{a}\\times\\vec{b}=\\begin{vmatrix}\\hat{i}&\\hat{j}&\\hat{k}\\\\a_1&a_2&a_3\\\\b_1&b_2&b_3\\end{vmatrix}$$",k:1},
+{l:"Parallel condition",m:"$\\vec{a}\\parallel\\vec{b}\\iff\\vec{a}\\times\\vec{b}=\\vec{0}$",k:1},
+{l:"Anti-commutative",m:"$\\vec{a}\\times\\vec{b}=-(\\vec{b}\\times\\vec{a})$",k:1},
+{l:"Cyclic rules",m:"$\\hat{i}\\times\\hat{j}=\\hat{k}$; $\\hat{j}\\times\\hat{k}=\\hat{i}$; $\\hat{k}\\times\\hat{i}=\\hat{j}$",k:1},
+{l:"Anti-cyclic rules",m:"$\\hat{j}\\times\\hat{i}=-\\hat{k}$; $\\hat{k}\\times\\hat{j}=-\\hat{i}$; $\\hat{i}\\times\\hat{k}=-\\hat{j}$"},
+{l:"$\\hat{a}\\times\\hat{a}=\\vec{0}$",m:"$\\hat{i}\\times\\hat{i}=\\hat{j}\\times\\hat{j}=\\hat{k}\\times\\hat{k}=\\vec{0}$",k:1},
+{l:"Area of parallelogram",m:"$|\\vec{a}\\times\\vec{b}|$",k:1},
+{l:"Area of triangle",m:"$\\dfrac{1}{2}|\\vec{a}\\times\\vec{b}|$",k:1},
+{l:"Scalar triple product",m:"$[\\vec{a}\\;\\vec{b}\\;\\vec{c}]=\\vec{a}\\cdot(\\vec{b}\\times\\vec{c})$",k:1},
+{l:"Coplanar condition",m:"$[\\vec{a}\\;\\vec{b}\\;\\vec{c}]=0\\iff$ vectors are coplanar",k:1},
+{l:"Volume of parallelepiped",m:"$V=|[\\vec{a}\\;\\vec{b}\\;\\vec{c}]|$",k:1},
+{l:"$[\\vec{a}\\;\\vec{b}\\;\\vec{c}]=[\\vec{b}\\;\\vec{c}\\;\\vec{a}]=[\\vec{c}\\;\\vec{a}\\;\\vec{b}]$",m:"Cyclic property of scalar triple product",n:"Sign changes when any two vectors swap"},
+]},
+]},
+
+{id:"c11",n:11,ico:"3D",title:"Three Dimensional Geometry",marks:"6-7",stars:2,col:"#e04060",
+summary:"Lines and planes in 3D. Know both vector and cartesian forms. Shortest distance between skew lines appears every year. For plane through 3 points, use the determinant form. Angle formulas use dot product logic.",
+patterns:"Common Q types: (1) Equation of line through 2 points (2m) (2) Shortest distance between lines (3m) (3) Equation of plane (3m) (4) Angle between line and plane (2m)",
+topics:[
+{t:"Direction Cosines & Ratios",fs:[
+{l:"DCs of a line",m:"$l=\\cos\\alpha,\\;m=\\cos\\beta,\\;n=\\cos\\gamma$",k:1},
+{l:"DC identity",m:"$l^2+m^2+n^2=1$",k:1},
+{l:"DR to DC",m:"$l=\\dfrac{a}{\\sqrt{a^2+b^2+c^2}}$, similarly $m,n$",k:1},
+{l:"DCs of x,y,z axes",m:"$(1,0,0)$; $(0,1,0)$; $(0,0,1)$"},
+]},
+{t:"Lines in 3D",fs:[
+{l:"Vector equation",m:"$\\vec{r}=\\vec{a}+\\lambda\\vec{b}$",k:1},
+{l:"Cartesian equation",m:"$$\\frac{x-x_1}{a}=\\frac{y-y_1}{b}=\\frac{z-z_1}{c}$$",k:1},
+{l:"Line through 2 points",m:"$$\\frac{x-x_1}{x_2-x_1}=\\frac{y-y_1}{y_2-y_1}=\\frac{z-z_1}{z_2-z_1}$$",k:1},
+{l:"Angle between 2 lines",m:"$$\\cos\\theta=\\left|\\frac{a_1a_2+b_1b_2+c_1c_2}{\\sqrt{\\Sigma a_1^2}\\cdot\\sqrt{\\Sigma a_2^2}}\\right|$$",k:1},
+{l:"Parallel lines",m:"$a_1/a_2=b_1/b_2=c_1/c_2$",k:1},
+{l:"Perpendicular lines",m:"$a_1a_2+b_1b_2+c_1c_2=0$",k:1},
+{l:"Shortest dist. (skew lines)",m:"$$d=\\frac{|(\\vec{a_2}-\\vec{a_1})\\cdot(\\vec{b_1}\\times\\vec{b_2})|}{|\\vec{b_1}\\times\\vec{b_2}|}$$",k:1},
+{l:"Shortest dist. (parallel lines)",m:"$$d=\\frac{|(\\vec{a_2}-\\vec{a_1})\\times\\vec{b}|}{|\\vec{b}|}$$",k:1},
+{l:"Point-to-line distance",m:"$d=\\dfrac{|(\\vec{P}-\\vec{a})\\times\\vec{b}|}{|\\vec{b}|}$"},
+]},
+{t:"Planes in 3D",fs:[
+{l:"Vector form",m:"$\\vec{r}\\cdot\\hat{n}=d$",k:1},
+{l:"General form",m:"$ax+by+cz+d=0$; normal $\\vec{n}=(a,b,c)$",k:1},
+{l:"Normal form",m:"$lx+my+nz=p$ where $l,m,n$ are DCs of normal",k:1},
+{l:"Intercept form",m:"$$\\frac{x}{a}+\\frac{y}{b}+\\frac{z}{c}=1$$",k:1},
+{l:"Plane through 3 points",m:"$$\\begin{vmatrix}x-x_1&y-y_1&z-z_1\\\\x_2-x_1&y_2-y_1&z_2-z_1\\\\x_3-x_1&y_3-y_1&z_3-z_1\\end{vmatrix}=0$$",k:1},
+{l:"Angle between 2 planes",m:"$$\\cos\\theta=\\left|\\frac{a_1a_2+b_1b_2+c_1c_2}{\\sqrt{\\Sigma a_1^2}\\cdot\\sqrt{\\Sigma a_2^2}}\\right|$$",k:1},
+{l:"Angle: line & plane",m:"$$\\sin\\theta=\\frac{|a_1a_2+b_1b_2+c_1c_2|}{\\sqrt{\\Sigma a_1^2}\\cdot\\sqrt{\\Sigma a_2^2}}$$",k:1},
+{l:"Point-to-plane distance",m:"$$d=\\frac{|ax_1+by_1+cz_1+d|}{\\sqrt{a^2+b^2+c^2}}$$",k:1},
+{l:"Parallel planes distance",m:"$d=|d_1-d_2|/\\sqrt{a^2+b^2+c^2}$",k:1},
+{l:"Foot of perpendicular",m:"$\\vec{F}=\\vec{P}-\\dfrac{(\\vec{P}\\cdot\\hat{n}-d)}{|\\hat{n}|^2}\\hat{n}$"},
+]},
+]},
+
+{id:"c12",n:12,ico:"LP",title:"Linear Programming",marks:"5",stars:1,col:"#d4a020",
+summary:"Graphical method for optimizing a linear objective function subject to linear constraints. The optimal solution always lies at a corner of the feasible region. Practice identifying whether the region is bounded or unbounded.",
+patterns:"Common Q types: (1) Find max/min Z with 2-3 constraints (5m) (2) Manufacturing/diet/transport word problem (5m)",
+topics:[
+{t:"Core Concepts",fs:[
+{l:"Objective function",m:"$Z=ax+by$ (to maximize or minimize)",k:1},
+{l:"Constraints",m:"Linear inequalities $a_1x+b_1y\\le c_1$ etc.",k:1},
+{l:"Feasible region",m:"Intersection of all constraint inequalities",k:1},
+{l:"Feasible solution",m:"Any point satisfying all constraints",},
+{l:"Optimal solution",m:"Feasible solution that optimizes $Z$",k:1},
+]},
+{t:"Theorems & Method",fs:[
+{l:"Corner Point Theorem",m:"Optimal value of $Z$ occurs at a vertex of the feasible region",n:"Evaluate $Z$ at ALL corner points!",k:1},
+{l:"Bounded region",m:"Both max and min always exist",},
+{l:"Unbounded region",m:"Max/min may not exist — check open half-plane",k:1},
+{l:"Steps",m:"1. Plot constraints 2. Shade feasible region 3. Find corner pts 4. Evaluate $Z$ 5. Compare",k:1},
+{l:"Infeasible problem",m:"Feasible region is empty — no solution exists"},
+{l:"Multiple optimal solutions",m:"$Z$ is constant along an edge of the feasible region"},
+]},
+]},
+
+{id:"c13",n:13,ico:"P(A)",title:"Probability",marks:"7-8",stars:3,col:"#3090f0",
+summary:"The most conceptual chapter. Bayes' Theorem is the signature 5-mark question. The binomial distribution appears in word problems. Key trap: independent events ≠ mutually exclusive events.",
+patterns:"Common Q types: (1) Conditional probability (2m) (2) Total probability (3m) (3) Bayes' Theorem (5m) (4) Binomial distribution word problem (3m)",
+topics:[
+{t:"Basic Probability",fs:[
+{l:"Classical definition",m:"$P(A)=\\dfrac{n(A)}{n(S)}$",k:1},
+{l:"Complement rule",m:"$P(A')=1-P(A)$",k:1},
+{l:"Addition rule",m:"$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$",k:1},
+{l:"Mutually exclusive",m:"$A\\cap B=\\emptyset\\Rightarrow P(A\\cup B)=P(A)+P(B)$",k:1},
+{l:"$P(A\\cap B')$",m:"$=P(A)-P(A\\cap B)$"},
+]},
+{t:"Conditional Probability",fs:[
+{l:"Conditional probability",m:"$$P(A|B)=\\frac{P(A\\cap B)}{P(B)},\\quad P(B)\\ne0$$",k:1},
+{l:"Multiplication rule",m:"$P(A\\cap B)=P(A)\\cdot P(B|A)=P(B)\\cdot P(A|B)$",k:1},
+{l:"Independent events",m:"$P(A\\cap B)=P(A)\\cdot P(B)$",k:1},
+{l:"Condition for independence",m:"$P(A|B)=P(A)$ and $P(B|A)=P(B)$",k:1},
+{l:"Independent $\\ne$ Exclusive",m:"Mutually excl. events with $P>0$ are NOT independent",n:"Classic conceptual MCQ every year!",k:1},
+{l:"Three events independent",m:"$P(A\\cap B\\cap C)=P(A)\\cdot P(B)\\cdot P(C)$ plus pairwise independence",n:"All four conditions needed"},
+]},
+{t:"Total Probability & Bayes'",fs:[
+{l:"Total Probability ★★",m:"$$P(E)=\\sum_{i=1}^nP(E|A_i)\\cdot P(A_i)$$",n:"$A_1,\\ldots,A_n$ must partition $S$",k:1},
+{l:"Bayes' Theorem ★★",m:"$$P(A_i|E)=\\frac{P(E|A_i)\\cdot P(A_i)}{\\sum_{j=1}^nP(E|A_j)\\cdot P(A_j)}$$",n:"Most important formula in this chapter",k:1},
+{l:"Prior probability",m:"$P(A_i)$ = probability before observing event",},
+{l:"Posterior probability",m:"$P(A_i|E)$ = updated probability after observing $E$",},
+]},
+{t:"Random Variables",fs:[
+{l:"Valid distribution",m:"$P(x_i)\\ge0$ and $\\displaystyle\\sum_iP(x_i)=1$",k:1},
+{l:"Mean $E(X)$",m:"$\\mu=\\displaystyle\\sum_ix_i\\,P(x_i)$",k:1},
+{l:"Variance",m:"$\\sigma^2=\\displaystyle\\sum_ix_i^2P(x_i)-\\mu^2=E(X^2)-[E(X)]^2$",k:1},
+{l:"Standard deviation",m:"$\\sigma=\\sqrt{\\text{Var}(X)}$",k:1},
+{l:"$E(aX+b)$",m:"$=aE(X)+b$"},
+{l:"$\\text{Var}(aX+b)$",m:"$=a^2\\text{Var}(X)$"},
+]},
+{t:"Binomial Distribution",fs:[
+{l:"Conditions",m:"$n$ independent Bernoulli trials, constant $p$, two outcomes only",k:1},
+{l:"Binomial distribution",m:"$$P(X=r)=\\binom{n}{r}p^rq^{n-r},\\quad r=0,1,\\ldots,n$$",k:1},
+{l:"Binomial mean",m:"$\\mu=E(X)=np$",k:1},
+{l:"Binomial variance",m:"$\\sigma^2=npq$",k:1},
+{l:"Binomial SD",m:"$\\sigma=\\sqrt{npq}$",k:1},
+{l:"$p+q=1$",m:"$q=1-p$",k:1},
+{l:"Mode of binomial",m:"If $(n+1)p$ is integer: two modes; else $\\lfloor(n+1)p\\rfloor$"},
+]},
+]},
+];
+
+
+/* ═══════════════════════════════════════════════
+   MathRef XII — Full JS Engine
+   Features: 2 LaTeX Copy, 3 Heatmap, 5 Notes,
+   6 Focus Mode, 8 Chapter Summary, 10 PDF Export,
+   13 Chapter Quiz, 14 Swipe Gestures
+═══════════════════════════════════════════════ */
+
+/* ── THEMES ──────────────────────────────────── */
+var THEMES=[
+  {id:"ink",   c1:"#0e0c0a",c2:"#e8a030"},
+  {id:"chalk", c1:"#f5f1e9",c2:"#b86a08"},
+  {id:"slate", c1:"#090e18",c2:"#38bdf8"},
+  {id:"moss",  c1:"#070e09",c2:"#4ade80"},
+  {id:"ember", c1:"#110806",c2:"#fb923c"}
+];
+
+/* ── DIFFICULTY MAP ──────────────────────────── */
+var DIFF_MAP={
+  c1:{0:"E",1:"E",2:"E",3:"M",4:"E",5:"E",6:"M",7:"M",8:"E",9:"M",10:"M",11:"E",12:"E",13:"E"},
+  c2:{0:"M",1:"M",2:"M",3:"E",4:"E",5:"E",6:"M",7:"M",8:"M",9:"M",10:"H",11:"M",12:"M",13:"M",14:"H",15:"H",16:"H",17:"H",18:"H",19:"H",20:"H",21:"H",22:"H"},
+  c3:{0:"E",1:"E",2:"E",3:"E",4:"E",5:"E",6:"E",7:"E",8:"E",9:"M",10:"M",11:"M",12:"M",13:"M",14:"M",15:"M",16:"E",17:"E",18:"H",19:"E",20:"E",21:"E",22:"H",23:"E",24:"H"},
+  c4:{0:"E",1:"H",2:"M",3:"M",4:"H",5:"E",6:"E",7:"E",8:"M",9:"M",10:"M",11:"H",12:"H",13:"H",14:"M",15:"M",16:"M",17:"H",18:"H",19:"H",20:"M",21:"M",22:"M",23:"H",24:"H"},
+  c5:{0:"M",1:"M",2:"E",3:"E",4:"E",5:"M",6:"M",7:"M",8:"H",9:"H",10:"E",11:"E",12:"E",13:"E",14:"E",15:"M",16:"M",17:"M",18:"M",19:"M",20:"M",21:"M",22:"M",23:"M"},
+  c6:{0:"M",1:"M",2:"M",3:"M",4:"E",5:"E",6:"E",7:"M",8:"E",9:"E",10:"E",11:"E",12:"M",13:"M",14:"M",15:"M",16:"M",17:"M",18:"H",19:"M",20:"M",21:"M",22:"M"},
+  c7:{0:"E",1:"E",2:"E",3:"E",4:"E",5:"E",6:"E",7:"E",8:"E",9:"E",10:"M",11:"M",12:"M",13:"M",14:"M",15:"M",16:"M",17:"M",18:"M",19:"M",20:"M",21:"M",22:"H",23:"H",24:"H",25:"M",26:"H",27:"H",28:"H",29:"M",30:"E",31:"M",32:"M",33:"M",34:"M",35:"M",36:"M",37:"M",38:"M",39:"M",40:"M",41:"M",42:"M",43:"H",44:"H",45:"M",46:"M",47:"M",48:"H",49:"H",50:"M",51:"H",52:"H",53:"H",54:"H",55:"H",56:"H",57:"H",58:"M",59:"M",60:"H",61:"H",62:"H",63:"H",64:"H",65:"M",66:"M",67:"M",68:"M",69:"M"},
+  c8:{0:"M",1:"H",2:"M",3:"E",4:"E",5:"M",6:"M",7:"E",8:"E"},
+  c9:{0:"E",1:"E",2:"E",3:"E",4:"E",5:"M",6:"H",7:"M",8:"M",9:"H",10:"M",11:"H",12:"H",13:"H"},
+  c10:{0:"E",1:"E",2:"M",3:"E",4:"E",5:"E",6:"E",7:"E",8:"E",9:"E",10:"M",11:"E",12:"M",13:"E",14:"M",15:"E",16:"E",17:"E",18:"E",19:"M",20:"M",21:"H",22:"M",23:"M",24:"M",25:"M",26:"H",27:"H",28:"M"},
+  c11:{0:"M",1:"E",2:"M",3:"M",4:"M",5:"M",6:"M",7:"M",8:"M",9:"H",10:"H",11:"E",12:"M",13:"M",14:"H",15:"H",16:"H",17:"H",18:"H",19:"H",20:"H"},
+  c12:{0:"E",1:"E",2:"E",3:"E",4:"E",5:"M",6:"M",7:"H",8:"M",9:"M",10:"M"},
+  c13:{0:"E",1:"E",2:"E",3:"E",4:"E",5:"M",6:"M",7:"M",8:"M",9:"M",10:"H",11:"M",12:"M",13:"M",14:"M",15:"E",16:"E",17:"M",18:"M",19:"M",20:"E",21:"M",22:"M",23:"M",24:"M",25:"M"}
+};
+
+function getDiff(chId,idx){
+  var m=DIFF_MAP[chId];
+  return m&&m[idx]?m[idx]:"M";
+}
+
+/* ── STATE ───────────────────────────────────── */
+var curTheme="ink", curDiff="all", curMode=null;
+var bookmarks={}, checked={}, userNotes={}, lastRevised={};
+var userDiffOverride={};
+var allFormulas=[];
+var focusIdx=0, focusPool=[];
+var compareSlots=[null,null];
+var quizPool=[], quizIdx=0, quizCorrect=0, quizChId=null;
+var noteEditGid=null;
+var pdfMode="key";
+
+/* ── STORAGE ─────────────────────────────────── */
+function save(){
+  try{
+    localStorage.setItem("mr12_bm",JSON.stringify(bookmarks));
+    localStorage.setItem("mr12_ck",JSON.stringify(checked));
+    localStorage.setItem("mr12_th",curTheme);
+    localStorage.setItem("mr12_lr",JSON.stringify(lastRevised));
+    localStorage.setItem("mr12_nt",JSON.stringify(userNotes));
+    localStorage.setItem("mr12_dd",JSON.stringify(userDiffOverride));
+  }catch(e){}
+}
+function load(){
+  try{
+    var b=localStorage.getItem("mr12_bm"); if(b)bookmarks=JSON.parse(b);
+    var c=localStorage.getItem("mr12_ck"); if(c)checked=JSON.parse(c);
+    var t=localStorage.getItem("mr12_th"); if(t)curTheme=t;
+    var l=localStorage.getItem("mr12_lr"); if(l)lastRevised=JSON.parse(l);
+    var n=localStorage.getItem("mr12_nt"); if(n)userNotes=JSON.parse(n);
+    var d=localStorage.getItem("mr12_dd"); if(d)userDiffOverride=JSON.parse(d);
+  }catch(e){}
+}
+
+/* ── BUILD FLAT LIST ─────────────────────────── */
+function buildFlat(){
+  allFormulas=[];
+  DATA.forEach(function(ch){
+    var idx=0;
+    ch.topics.forEach(function(tp){
+      tp.fs.forEach(function(f){
+        var gid=ch.id+"_"+idx;
+        allFormulas.push({gid:gid,f:f,chTitle:ch.title,chId:ch.id,topic:tp.t,col:ch.col,idx:idx});
+        idx++;
+      });
+    });
+  });
+}
+
+/* ── CARD HTML ───────────────────────────────── */
+function card(f, col, gid, chId, idx){
+  var diff=userDiffOverride[gid]||getDiff(chId,idx);
+  var isBm=!!bookmarks[gid], isCk=!!checked[gid];
+  var note=userNotes[gid]||"";
+  var cls="fc";
+  if(f.k)cls+=" key";
+  if(isBm)cls+=" bookmarked";
+  if(isCk)cls+=" checked";
+  var diffBadge="";
+  if(diff==="E")diffBadge='<span class="fc-diff diff-E">Easy</span>';
+  else if(diff==="M")diffBadge='<span class="fc-diff diff-M">Med</span>';
+  else if(diff==="H")diffBadge='<span class="fc-diff diff-H">Hard</span>';
+  var h='<div class="'+cls+'" id="fc-'+gid+'" data-gid="'+gid+'" data-chid="'+chId+'" data-idx="'+idx+'">';
+  h+='<div class="swipe-hint swipe-hint-r">★</div>';
+  h+='<div class="swipe-hint swipe-hint-l">✓</div>';
+  h+='<div class="fc-lbl">'+f.l+'</div>';
+  h+='<div class="fc-math">'+f.m+'</div>';
+  if(f.n)h+='<div class="fc-note">💡 '+f.n+'</div>';
+  if(note)h+='<div class="fc-user-note" data-action="note">📝 '+esc(note)+'</div>';
+  h+='<div class="fc-actions">';
+  h+='<button class="fc-act-btn fc-bm-btn'+(isBm?" starred":"")+'" data-action="bm" title="Bookmark">'+(isBm?"★":"☆")+'</button>';
+  h+='<button class="fc-act-btn" data-action="ck" title="Done">'+(isCk?"☑":"☐")+'</button>';
+  h+='<button class="fc-act-btn" data-action="focus" title="Focus">⤢</button>';
+  h+='<button class="fc-act-btn" data-action="copy" title="Copy LaTeX">⎘</button>';
+  h+='<button class="fc-act-btn" data-action="note" title="Add note">✏</button>';
+  h+='</div>';
+  h+=diffBadge;
+  h+='</div>';
+  return h;
+}
+
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* ── RENDER ALL ──────────────────────────────── */
+function renderAll(){
+  buildFlat();
+  renderThemes();
+  renderSidebar();
+  renderHeatmap();
+  renderChapters();
+  updateStats();
+}
+
+/* ── SIDEBAR ─────────────────────────────────── */
+function renderSidebar(){
+  var sb='<div class="sb-ttl">Chapters</div>';
+  DATA.forEach(function(ch){
+    var total=0,done=0,idx=0;
+    ch.topics.forEach(function(tp){tp.fs.forEach(function(){
+      if(checked[ch.id+"_"+idx])done++;total++;idx++;
+    });});
+    var pct=total?Math.round(done/total*100):0;
+    var ago="";
+    if(lastRevised[ch.id]){
+      var d=Math.floor((Date.now()-lastRevised[ch.id])/86400000);
+      ago=d===0?"Today":d===1?"Yesterday":d+"d ago";
+    }
+    sb+='<a class="sb-lnk" href="#'+ch.id+'" onclick="setSB(this);markRevised(\''+ch.id+'\')">'
+      +'<span class="sb-ico">'+ch.ico+'</span>'
+      +'<span class="sb-lbl">'+ch.title+'</span>'
+      +'<span class="sb-right">'
+      +(ago?'<span class="sb-ago">'+ago+'</span>':'')
+      +'<span class="sb-st">'+'★'.repeat(ch.stars)+'</span>'
+      +'</span></a>'
+      +'<div class="sb-prog"><div class="sb-prog-bar" id="sbp-'+ch.id+'" style="width:'+pct+'%"></div></div>'
+      +'<div class="sb-prog-lbl"><span>'+done+'/'+total+'</span><span>'+pct+'%</span></div>';
+  });
+  document.getElementById("sidebar").innerHTML=sb;
+}
+
+/* ── THEMES ──────────────────────────────────── */
+function renderThemes(){
+  var h="";
+  THEMES.forEach(function(t){
+    h+='<div class="tdot'+(t.id===curTheme?" on":"")+'" id="td-'+t.id+'"'
+      +' style="background:linear-gradient(135deg,'+t.c1+','+t.c2+')"'
+      +' title="'+t.id+'" onclick="setTheme(\''+t.id+'\')"></div>';
+  });
+  document.getElementById("tdots").innerHTML=h;
+}
+
+/* ── HEATMAP (feature 3) ─────────────────────── */
+function renderHeatmap(){
+  var maxM=14;
+  var h="";
+  DATA.forEach(function(ch){
+    var marks=parseInt(ch.marks)||5;
+    var total=0,done=0,idx=0;
+    ch.topics.forEach(function(tp){tp.fs.forEach(function(){
+      if(checked[ch.id+"_"+idx])done++;total++;idx++;
+    });});
+    var pct=total?Math.round(done/total*100):0;
+    var intensity=Math.round((marks/maxM)*100);
+    h+='<div class="hm-block" onclick="jumpTo(\''+ch.id+'\')"'
+      +' style="background:'+ch.col+Math.round(intensity*0.4+10).toString(16).padStart(2,"0")
+      +';border-color:'+ch.col+'44">'
+      +'<div class="hm-ico">'+ch.ico+'</div>'
+      +'<div class="hm-title">'+ch.title+'</div>'
+      +'<div class="hm-marks">~'+ch.marks+' marks · '+'★'.repeat(ch.stars)+'</div>'
+      +'<div class="hm-bar"><div class="hm-bar-fill" style="width:'+pct+'%"></div></div>'
+      +'<div class="hm-prog-txt">'+done+'/'+total+' done</div>'
+      +'</div>';
+  });
+  document.getElementById("heatmap-grid").innerHTML=h;
+}
+
+function jumpTo(chId){
+  var el=document.getElementById(chId);
+  if(el){el.scrollIntoView({behavior:"smooth"});markRevised(chId);}
+}
+
+/* ── CHAPTERS ────────────────────────────────── */
+function renderChapters(){
+  var h="";
+  DATA.forEach(function(ch){
+    var total=0,done=0,idx=0,tps="";
+    ch.topics.forEach(function(tp){
+      var cards="";
+      tp.fs.forEach(function(f){
+        var gid=ch.id+"_"+idx;
+        cards+=card(f,ch.col,gid,ch.id,idx);
+        if(checked[gid])done++;total++;idx++;
+      });
+      tps+='<div class="tg">'
+        +'<div class="tg-head"><span class="tg-name">'+tp.t+'</span><div class="tg-line"></div></div>'
+        +'<div class="fgrid">'+cards+'</div>'
+        +'</div>';
+    });
+    var pct=total?Math.round(done/total*100):0;
+    var stars='★'.repeat(ch.stars)+'☆'.repeat(3-ch.stars);
+    h+='<section class="ch-sec" id="'+ch.id+'">'
+      // header
+      +'<div class="ch-top">'
+      +'<div class="ch-deco">'+ch.n+'</div>'
+      +'<div class="ch-ico" style="background:'+ch.col+'1a;color:'+ch.col+'">'+ch.ico+'</div>'
+      +'<div style="flex:1">'
+      +'<div class="ch-title">'+ch.title+'</div>'
+      +'<div class="ch-meta">'
+      +'<span class="mpill mpill-n">CH '+String(ch.n).padStart(2,"0")+'</span>'
+      +'<span class="mpill mpill-m">~'+ch.marks+' marks</span>'
+      +'<span class="ch-stars">'+stars+'</span>'
+      +'<button class="ch-quizbtn" onclick="startChapterQuiz(\''+ch.id+'\',event)">⚡ Quick Quiz</button>'
+      +'</div></div></div>'
+      // progress
+      +'<div class="ch-prog-wrap">'
+      +'<div class="ch-prog-lbl"><span>Progress: '+done+'/'+total+'</span><span>'+pct+'%</span></div>'
+      +'<div class="ch-prog-outer"><div class="ch-prog-inner" id="cprog-'+ch.id+'" style="width:'+pct+'%"></div></div>'
+      +'</div>'
+      // summary (feature 8)
+      +(ch.summary?
+        '<div class="ch-summary">'
+        +'<div class="ch-summary-head" onclick="toggleSummary(this)">'
+        +'<span class="ch-summary-ico">▶</span>'
+        +'<span class="ch-summary-ttl">Chapter Summary &amp; Exam Patterns</span>'
+        +'</div>'
+        +'<div class="ch-summary-body">'
+        +'<div class="ch-summary-txt">'+ch.summary+'</div>'
+        +(ch.patterns?'<div class="ch-patterns-ttl">Common Exam Questions</div><div class="ch-patterns-txt">'+ch.patterns+'</div>':'')
+        +'</div></div>':'')
+      +tps
+      +'</section>';
+  });
+  document.getElementById("chapters").innerHTML=h;
+  setupSwipe();
+}
+
+/* ── SUMMARY TOGGLE (feature 8) ─────────────── */
+function toggleSummary(el){
+  var ico=el.querySelector(".ch-summary-ico");
+  var body=el.nextElementSibling;
+  var open=body.classList.toggle("open");
+  ico.classList.toggle("open",open);
+}
+
+/* ── PROGRESS UPDATE ─────────────────────────── */
+function updateChProg(chId){
+  var ch=DATA.find(function(c){return c.id===chId;});
+  if(!ch)return;
+  var total=0,done=0,idx=0;
+  ch.topics.forEach(function(tp){tp.fs.forEach(function(){
+    if(checked[chId+"_"+idx])done++;total++;idx++;
+  });});
+  var pct=total?Math.round(done/total*100):0;
+  var b=document.getElementById("cprog-"+chId);
+  if(b)b.style.width=pct+"%";
+  var sb=document.getElementById("sbp-"+chId);
+  if(sb)sb.style.width=pct+"%";
+  renderHeatmap();
+  updateStats();
+}
+
+function updateStats(){
+  var bm=Object.keys(bookmarks).length;
+  var ck=Object.keys(checked).length;
+  var el=document.getElementById("h-bm"); if(el)el.textContent=bm;
+  var el2=document.getElementById("h-done"); if(el2)el2.textContent=ck;
+}
+
+/* ── BOOKMARK / CHECK ────────────────────────── */
+function toggleBm(gid){
+  bookmarks[gid]=!bookmarks[gid];
+  if(!bookmarks[gid])delete bookmarks[gid];
+  var fc=document.getElementById("fc-"+gid);
+  if(fc){
+    fc.classList.toggle("bookmarked",!!bookmarks[gid]);
+    var btn=fc.querySelector(".fc-bm-btn");
+    if(btn){btn.innerHTML=bookmarks[gid]?"★":"☆";btn.classList.toggle("starred",!!bookmarks[gid]);}
+  }
+  save();updateStats();
+  toast(bookmarks[gid]?"Bookmarked ★":"Bookmark removed");
+}
+
+function toggleCheck(gid){
+  checked[gid]=!checked[gid];
+  if(!checked[gid])delete checked[gid];
+  var fc=document.getElementById("fc-"+gid);
+  if(fc){
+    fc.classList.toggle("checked",!!checked[gid]);
+    var btn=fc.querySelectorAll(".fc-act-btn")[1];
+    if(btn)btn.innerHTML=checked[gid]?"☑":"☐";
+  }
+  var chId=gid.split("_")[0];
+  updateChProg(chId);save();
+}
+
+/* ── LAST REVISED ────────────────────────────── */
+function markRevised(chId){lastRevised[chId]=Date.now();save();}
+
+/* ── COPY LATEX (feature 2) ──────────────────── */
+function copyLatex(gid){
+  var item=allFormulas.find(function(f){return f.gid===gid;});
+  if(!item)return;
+  var raw=item.f.m.replace(/\$\$/g,"").replace(/\$/g,"");
+  navigator.clipboard.writeText(item.f.m).then(function(){
+    toast("LaTeX copied! 📋");
+  }).catch(function(){
+    toast("Copy: "+item.f.m.substring(0,40));
+  });
+}
+
+/* ── NOTES (feature 5) ───────────────────────── */
+function openNoteModal(gid){
+  noteEditGid=gid;
+  var item=allFormulas.find(function(f){return f.gid===gid;});
+  var sub=item?(item.f.l+" · "+item.chTitle):"";
+  document.getElementById("note-modal-sub").textContent=sub;
+  document.getElementById("note-modal-ta").value=userNotes[gid]||"";
+  document.getElementById("note-modal").classList.add("show");
+  setTimeout(function(){document.getElementById("note-modal-ta").focus();},100);
+}
+
+function saveNote(){
+  if(!noteEditGid)return;
+  var val=document.getElementById("note-modal-ta").value.trim();
+  if(val)userNotes[noteEditGid]=val; else delete userNotes[noteEditGid];
+  save();
+  refreshCard(noteEditGid);
+  closeNoteModal();
+  toast("Note saved ✏");
+}
+
+function clearNote(){
+  document.getElementById("note-modal-ta").value="";
+}
+
+function closeNoteModal(){
+  document.getElementById("note-modal").classList.remove("show");
+  noteEditGid=null;
+}
+
+function refreshCard(gid){
+  var item=allFormulas.find(function(f){return f.gid===gid;});
+  if(!item)return;
+  var el=document.getElementById("fc-"+gid);
+  if(!el)return;
+  el.outerHTML=card(item.f,item.col,gid,item.chId,item.idx);
+  var newEl=document.getElementById("fc-"+gid);
+  if(newEl)renderMath(newEl);
+  setupSwipeOn(newEl);
+}
+
+/* ── FOCUS MODE (feature 6) ──────────────────── */
+function openFocus(gid){
+  focusPool=allFormulas.slice();
+  focusIdx=focusPool.findIndex(function(f){return f.gid===gid;});
+  if(focusIdx<0)focusIdx=0;
+  document.getElementById("focus-overlay").classList.add("show");
+  renderFocus();
+}
+
+function renderFocus(){
+  var item=focusPool[focusIdx];
+  if(!item)return;
+  var gid=item.gid;
+  document.getElementById("focus-counter").textContent=(focusIdx+1)+" / "+focusPool.length;
+  document.getElementById("focus-title").textContent=item.chTitle;
+  document.getElementById("focus-ch").textContent=item.chTitle+" › "+item.topic;
+  document.getElementById("focus-lbl").textContent=item.f.l;
+  document.getElementById("focus-math").innerHTML=item.f.m;
+  renderMath(document.getElementById("focus-math"));
+  var noteEl=document.getElementById("focus-note");
+  if(item.f.n){noteEl.style.display="";noteEl.textContent="💡 "+item.f.n;}
+  else noteEl.style.display="none";
+  document.getElementById("focus-note-ta").value=userNotes[gid]||"";
+  var diff=userDiffOverride[gid]||getDiff(item.chId,item.idx);
+  document.querySelectorAll(".focus-diff-chip").forEach(function(c){
+    c.classList.toggle("on",c.getAttribute("data-d")===diff);
+  });
+  // bm/ck buttons
+  var bmBtn=document.querySelector(".focus-btn:nth-child(1)");
+  if(bmBtn)bmBtn.innerHTML=(bookmarks[gid]?"★ Bookmarked":"☆ Bookmark");
+  var ckBtn=document.querySelector(".focus-btn:nth-child(2)");
+  if(ckBtn)ckBtn.innerHTML=(checked[gid]?"☑ Done":"☐ Mark Done");
+  // arrows
+  document.getElementById("focus-prev").disabled=(focusIdx===0);
+  document.getElementById("focus-next").disabled=(focusIdx===focusPool.length-1);
+}
+
+function moveFocus(dir){
+  var ni=focusIdx+dir;
+  if(ni<0||ni>=focusPool.length)return;
+  focusIdx=ni;renderFocus();
+}
+
+function closeFocus(){
+  document.getElementById("focus-overlay").classList.remove("show");
+}
+
+function saveFocusNote(){
+  var item=focusPool[focusIdx];if(!item)return;
+  var val=document.getElementById("focus-note-ta").value.trim();
+  if(val)userNotes[item.gid]=val; else delete userNotes[item.gid];
+  save();
+}
+
+function setFocusDiff(d){
+  var item=focusPool[focusIdx];if(!item)return;
+  userDiffOverride[item.gid]=d;
+  save();
+  document.querySelectorAll(".focus-diff-chip").forEach(function(c){
+    c.classList.toggle("on",c.getAttribute("data-d")===d);
+  });
+  var fc=document.getElementById("fc-"+item.gid);
+  if(fc){
+    fc.querySelectorAll(".fc-diff").forEach(function(el){el.remove();});
+    var badge=document.createElement("span");
+    badge.className="fc-diff diff-"+d;
+    badge.textContent=d==="E"?"Easy":d==="M"?"Med":"Hard";
+    fc.appendChild(badge);
+  }
+}
+
+function focusToggleBm(){
+  var item=focusPool[focusIdx];if(!item)return;
+  toggleBm(item.gid);
+  var btn=document.querySelector(".focus-btn:nth-child(1)");
+  if(btn)btn.innerHTML=(bookmarks[item.gid]?"★ Bookmarked":"☆ Bookmark");
+}
+
+function focusToggleCheck(){
+  var item=focusPool[focusIdx];if(!item)return;
+  toggleCheck(item.gid);
+  var btn=document.querySelector(".focus-btn:nth-child(2)");
+  if(btn)btn.innerHTML=(checked[item.gid]?"☑ Done":"☐ Mark Done");
+}
+
+function focusCopyLatex(){
+  var item=focusPool[focusIdx];if(!item)return;
+  copyLatex(item.gid);
+}
+
+/* ── CHAPTER QUIZ (feature 13) ───────────────── */
+function startChapterQuiz(chId,e){
+  if(e)e.stopPropagation();
+  var pool=allFormulas.filter(function(f){return f.chId===chId&&f.f.k;});
+  if(!pool.length)pool=allFormulas.filter(function(f){return f.chId===chId;});
+  quizPool=shuffle(pool).slice(0,8);
+  quizIdx=0;quizCorrect=0;quizChId=chId;
+  var ch=DATA.find(function(c){return c.id===chId;});
+  document.getElementById("quiz-title").textContent=(ch?ch.title:"")+" Quiz";
+  document.getElementById("quiz-modal").classList.add("show");
+  renderQuiz();
+}
+
+function renderQuiz(){
+  var pbar=document.getElementById("quiz-pbar");
+  pbar.style.width=(quizIdx/quizPool.length*100)+"%";
+  document.getElementById("quiz-meta").textContent=quizCorrect+"/"+quizPool.length;
+  if(quizIdx>=quizPool.length){
+    document.getElementById("quiz-body").innerHTML=
+      '<div class="quiz-end">'
+      +'<div class="quiz-end-score">'+quizCorrect+"/"+quizPool.length+'</div>'
+      +'<div class="quiz-end-msg">'+quizMsg(quizCorrect,quizPool.length)+'</div>'
+      +'</div>';
+    document.getElementById("quiz-btns").innerHTML=
+      '<button class="quiz-btn quiz-btn-reveal" onclick="startChapterQuiz(\''+quizChId+'\',null)">Retry</button>'
+      +'<button class="quiz-btn" onclick="closeQuiz()">Close</button>';
+    pbar.style.width="100%";
+    return;
+  }
+  var q=quizPool[quizIdx];
+  document.getElementById("quiz-body").innerHTML=
+    '<div class="quiz-ch-label">'+q.chTitle+'</div>'
+    +'<div class="quiz-topic-label">'+q.topic+'</div>'
+    +'<div class="quiz-formula-box" id="qfbox">'+q.f.m+'</div>'
+    +'<div class="quiz-reveal" id="qrev">'
+    +'<div class="quiz-reveal-lbl">Formula name:</div>'
+    +'<div class="quiz-reveal-ans">'+q.f.l+'</div>'
+    +(q.f.n?'<div class="quiz-reveal-note">💡 '+q.f.n+'</div>':'')
+    +'</div>';
+  renderMath(document.getElementById("qfbox"));
+  document.getElementById("quiz-btns").innerHTML=
+    '<button class="quiz-btn quiz-btn-reveal" onclick="revealQuiz()">Reveal</button>'
+    +'<button class="quiz-btn" onclick="closeQuiz()">Exit</button>';
+}
+
+function revealQuiz(){
+  document.getElementById("qrev").classList.add("show");
+  renderMath(document.getElementById("qrev"));
+  document.getElementById("quiz-btns").innerHTML=
+    '<button class="quiz-btn quiz-btn-correct" onclick="scoreQuiz(true)">✔ Got it</button>'
+    +'<button class="quiz-btn quiz-btn-wrong" onclick="scoreQuiz(false)">✘ Missed</button>';
+}
+
+function scoreQuiz(ok){
+  if(ok)quizCorrect++;
+  quizIdx++;renderQuiz();
+}
+
+function closeQuiz(){document.getElementById("quiz-modal").classList.remove("show");}
+
+function quizMsg(c,t){
+  var p=c/t;
+  if(p===1)return "🏆 Perfect! Exam ready.";
+  if(p>=0.8)return "👍 Great work!";
+  if(p>=0.5)return "💪 Keep revising.";
+  return "📚 More practice needed.";
+}
+
+/* ── PDF EXPORT (feature 10) ─────────────────── */
+function selectPdfOpt(mode,el){
+  pdfMode=mode;
+  document.querySelectorAll(".pdf-opt").forEach(function(o){o.classList.remove("selected");});
+  el.classList.add("selected");
+}
+
+function exportPdf(){
+  document.getElementById("pdf-modal").classList.remove("show");
+  var items;
+  if(pdfMode==="key") items=allFormulas.filter(function(f){return f.f.k;});
+  else if(pdfMode==="bm") items=allFormulas.filter(function(f){return bookmarks[f.gid];});
+  else items=allFormulas.slice();
+  if(!items.length){toast("No formulas to export!");return;}
+
+  var byChapter={};
+  items.forEach(function(f){
+    if(!byChapter[f.chId])byChapter[f.chId]={title:f.chTitle,col:f.col,items:[]};
+    byChapter[f.chId].items.push(f);
+  });
+
+  var rows="";
+  DATA.forEach(function(ch){
+    var grp=byChapter[ch.id];
+    if(!grp)return;
+    rows+='<div class="pdf-ch"><h2 style="color:'+grp.col+';font-size:13px;margin:12px 0 6px;font-family:Georgia,serif;border-bottom:2px solid '+grp.col+';padding-bottom:3px">'+grp.title+'</h2><div class="pdf-grid">';
+    grp.items.forEach(function(f){
+      rows+='<div class="pdf-card'+(f.f.k?" pdf-key":"")+'">'
+        +'<div class="pdf-lbl">'+f.f.l+'</div>'
+        +'<div class="pdf-math">'+f.f.m+'</div>'
+        +(f.f.n?'<div class="pdf-note">'+f.f.n+'</div>':'')
+        +'</div>';
+    });
+    rows+='</div></div>';
+  });
+
+  var win=window.open("","_blank");
+  win.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8">'
+    +'<title>MathRef XII Cheatsheet</title>'
+    +'<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">'
+    +'<style>'
+    +'*{box-sizing:border-box;margin:0;padding:0}'
+    +'body{font-family:Arial,sans-serif;font-size:10px;background:#fff;color:#111;padding:14px}'
+    +'.header{text-align:center;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:12px}'
+    +'.header h1{font-size:18px;font-family:Georgia,serif}'
+    +'.header p{font-size:9px;color:#555;margin-top:3px}'
+    +'.pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}'
+    +'.pdf-card{border:1px solid #ccc;border-radius:4px;padding:6px;background:#fff;page-break-inside:avoid}'
+    +'.pdf-key{background:#fffbe6;border-left:3px solid #e8a030}'
+    +'.pdf-lbl{font-size:7.5px;text-transform:uppercase;letter-spacing:.05em;color:#888;margin-bottom:3px;font-family:monospace}'
+    +'.pdf-math{font-size:9.5px;overflow:hidden}'
+    +'.pdf-note{font-size:7.5px;color:#777;margin-top:3px;border-left:2px solid #ddd;padding-left:4px}'
+    +'@media print{body{padding:8px}.pdf-card{page-break-inside:avoid}}'
+    +'</style>'
+    +'<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"><\/script>'
+    +'<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"><\/script>'
+    +'</head><body>'
+    +'<div class="header"><h1>MathRef XII — Cheatsheet</h1>'
+    +'<p>'+items.length+' formulas · CBSE 2024-25 · Generated '+new Date().toLocaleDateString()+'</p></div>'
+    +rows
+    +'<script>renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});setTimeout(function(){window.print();},1200);<\/script>'
+    +'</body></html>');
+  win.document.close();
+}
+
+/* ── SWIPE GESTURES (feature 14) ─────────────── */
+function setupSwipe(){
+  document.querySelectorAll(".fc").forEach(setupSwipeOn);
+}
+
+function setupSwipeOn(el){
+  if(!el)return;
+  var startX=0,startY=0,moved=false;
+  el.addEventListener("touchstart",function(e){
+    startX=e.touches[0].clientX;startY=e.touches[0].clientY;moved=false;
+  },{passive:true});
+  el.addEventListener("touchmove",function(e){
+    var dx=e.touches[0].clientX-startX;
+    var dy=e.touches[0].clientY-startY;
+    if(Math.abs(dx)>Math.abs(dy)+10){
+      moved=true;
+      el.classList.toggle("swiping-right",dx>30);
+      el.classList.toggle("swiping-left",dx<-30);
+    }
+  },{passive:true});
+  el.addEventListener("touchend",function(e){
+    var dx=e.changedTouches[0].clientX-startX;
+    el.classList.remove("swiping-right","swiping-left");
+    if(!moved)return;
+    var gid=el.getAttribute("data-gid");
+    if(dx>60){toggleBm(gid);}
+    else if(dx<-60){toggleCheck(gid);}
+  });
+}
+
+/* ── EVENT DELEGATION ────────────────────────── */
+document.addEventListener("click",function(e){
+  var btn=e.target.closest("[data-action]");
+  if(!btn)return;
+  var fc=btn.closest(".fc");
+  if(!fc)return;
+  var gid=fc.getAttribute("data-gid");
+  var action=btn.getAttribute("data-action");
+  e.stopPropagation();
+  if(action==="bm")     toggleBm(gid);
+  else if(action==="ck")     toggleCheck(gid);
+  else if(action==="copy")   copyLatex(gid);
+  else if(action==="focus")  openFocus(gid);
+  else if(action==="note")   openNoteModal(gid);
+});
+
+/* ── FILTER ──────────────────────────────────── */
+function setDiff(diff,btn){
+  curDiff=diff;
+  document.querySelectorAll(".fchip").forEach(function(c){c.classList.remove("on");});
+  btn.classList.add("on");
+  document.querySelectorAll(".fc").forEach(function(el){
+    var gid=el.getAttribute("data-gid");
+    var chId=el.getAttribute("data-chid");
+    var idx=parseInt(el.getAttribute("data-idx"));
+    var d=userDiffOverride[gid]||getDiff(chId,idx);
+    var show=true;
+    if(diff==="E")show=d==="E";
+    else if(diff==="M")show=d==="M";
+    else if(diff==="H")show=d==="H";
+    else if(diff==="key")show=el.classList.contains("key");
+    else if(diff==="bm")show=!!bookmarks[gid];
+    el.style.display=show?"":"none";
+  });
+  document.querySelectorAll(".tg").forEach(function(tg){
+    var v=tg.querySelectorAll('.fc:not([style*="none"])');
+    tg.style.display=v.length?"":"none";
+  });
+  document.querySelectorAll(".ch-sec").forEach(function(sec){
+    var v=sec.querySelectorAll('.fc:not([style*="none"])');
+    sec.style.display=v.length?"":"none";
+  });
+}
+
+/* ── SEARCH ──────────────────────────────────── */
+function doSearch(q){
+  var pane=document.getElementById("spane");
+  var hero=document.getElementById("hero");
+  var hm=document.getElementById("heatmap-section");
+  var chs=document.getElementById("chapters");
+  var fb=document.getElementById("filter-bar");
+  if(!q.trim()){
+    pane.style.display="none";hero.style.display="";
+    hm.style.display="";chs.style.display="";fb.style.display="";
+    return;
+  }
+  hero.style.display="none";hm.style.display="none";
+  chs.style.display="none";fb.style.display="none";pane.style.display="block";
+  var ql=q.toLowerCase();
+  var hits=allFormulas.filter(function(f){
+    return f.f.l.toLowerCase().indexOf(ql)>=0
+      ||f.chTitle.toLowerCase().indexOf(ql)>=0
+      ||f.topic.toLowerCase().indexOf(ql)>=0
+      ||(f.f.n&&f.f.n.toLowerCase().indexOf(ql)>=0);
+  });
+  document.getElementById("smeta").textContent=hits.length
+    ?(hits.length+' formula'+(hits.length>1?"s":"")+" found")
+    :"No results";
+  var h="";
+  hits.forEach(function(f){
+    h+='<div class="fc'+(f.f.k?" key":"")+'" data-gid="'+f.gid+'" data-chid="'+f.chId+'" data-idx="'+f.idx+'">'
+      +'<div class="fc-lbl" style="color:var(--t3)">'+f.chTitle+' › '+f.topic+'</div>'
+      +'<div class="fc-lbl">'+f.f.l+'</div>'
+      +'<div class="fc-math">'+f.f.m+'</div>'
+      +(f.f.n?'<div class="fc-note">💡 '+f.f.n+'</div>':'')
+      +'<div class="fc-actions">'
+      +'<button class="fc-act-btn" data-action="copy" title="Copy LaTeX">⎘</button>'
+      +'<button class="fc-act-btn" data-action="focus" title="Focus">⤢</button>'
+      +'</div></div>';
+  });
+  var g=document.getElementById("sgrid");g.innerHTML=h;
+  renderMath(g);
+}
+
+/* ── THEME ───────────────────────────────────── */
+function setTheme(id){
+  curTheme=id;
+  document.documentElement.setAttribute("data-theme",id);
+  document.querySelectorAll(".tdot").forEach(function(d){d.classList.remove("on");});
+  var dot=document.getElementById("td-"+id);
+  if(dot)dot.classList.add("on");
+  save();
+}
+
+/* ── SIDEBAR ACTIVE ──────────────────────────── */
+function setSB(el){
+  document.querySelectorAll(".sb-lnk").forEach(function(a){a.classList.remove("on");});
+  el.classList.add("on");
+}
+
+/* ── MATH RENDER ─────────────────────────────── */
+function renderMath(el){
+  renderMathInElement(el||document.body,{
+    delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],
+    throwOnError:false,strict:false
+  });
+}
+
+/* ── TOAST ───────────────────────────────────── */
+var toastTm;
+function toast(msg){
+  var el=document.getElementById("toast");
+  el.textContent=msg;el.classList.add("show");
+  clearTimeout(toastTm);
+  toastTm=setTimeout(function(){el.classList.remove("show");},2200);
+}
+
+/* ── SCROLL ──────────────────────────────────── */
+window.addEventListener("scroll",function(){
+  var pct=scrollY/(document.documentElement.scrollHeight-innerHeight)*100;
+  document.getElementById("pbar").style.width=pct+"%";
+  document.getElementById("btt").classList.toggle("show",scrollY>400);
+},{ passive:true });
+
+/* ── INTERSECTION OBSERVER ───────────────────── */
+function setupObserver(){
+  document.querySelectorAll(".ch-sec").forEach(function(sec){
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        markRevised(e.target.id);
+        document.querySelectorAll(".sb-lnk").forEach(function(a){a.classList.remove("on");});
+        var lnk=document.querySelector('.sb-lnk[href="#'+e.target.id+'"]');
+        if(lnk){lnk.classList.add("on");lnk.scrollIntoView({block:"nearest"});}
+      });
+    },{threshold:0.1,rootMargin:"-60px 0px -55% 0px"}).observe(sec);
+  });
+}
+
+/* ── KEYBOARD SHORTCUTS ──────────────────────── */
+document.addEventListener("keydown",function(e){
+  if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA")return;
+  if(e.key==="/"){ e.preventDefault();document.getElementById("qinput").focus(); }
+  else if(e.key==="Escape"){ closeFocus();closeQuiz();closeNoteModal();document.getElementById("qinput").value="";doSearch(""); }
+  else if(e.key==="t"||e.key==="T"){ var i=THEMES.findIndex(function(t){return t.id===curTheme;});setTheme(THEMES[(i+1)%THEMES.length].id); }
+  else if(e.key==="ArrowLeft"||e.key==="ArrowRight"){
+    var fo=document.getElementById("focus-overlay");
+    if(fo.classList.contains("show"))moveFocus(e.key==="ArrowLeft"?-1:1);
+  }
+});
+
+/* ── NAV BUTTON WIRING ───────────────────────── */
+document.getElementById("btn-bm").onclick=function(){
+  var any=Object.keys(bookmarks).length;
+  if(!any){toast("Star some formulas first! ☆");return;}
+  document.getElementById("qinput").value="";
+  document.querySelectorAll(".fchip").forEach(function(c){c.classList.remove("on");});
+  document.querySelector('.fchip[data-diff="bm"]').classList.add("on");
+  setDiff("bm",document.querySelector('.fchip[data-diff="bm"]'));
+  document.getElementById("hero").style.display="none";
+  document.getElementById("heatmap-section").style.display="none";
+};
+document.getElementById("btn-quiz").onclick=function(){
+  var ch=DATA[Math.floor(Math.random()*DATA.length)];
+  startChapterQuiz(ch.id,null);
+};
+document.getElementById("btn-pdf").onclick=function(){
+  document.getElementById("pdf-modal").classList.add("show");
+};
+
+/* ── UTILS ───────────────────────────────────── */
+function shuffle(a){
+  var b=a.slice();
+  for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}
+  return b;
+}
+
+/* ═══ BOOT ═══════════════════════════════════ */
+load();
+document.documentElement.setAttribute("data-theme",curTheme);
+renderAll();
+renderMath();
+setupObserver();
+updateStats();
+
+</script>
+</body>
+</html>
